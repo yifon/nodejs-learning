@@ -1,0 +1,167 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Promise animation</title>
+    <style>
+        .ball {
+            width: 40px;
+            height: 40px;
+            border-radius: 20px;
+        }
+
+        .ball1 {
+            background: red;
+        }
+
+        .ball2 {
+            background: yellow;
+        }
+
+        .ball3 {
+            background: green;
+        }
+    </style>
+    <script src="./node_modules/bluebird/js/browser/bluebird.js"></script>
+</head>
+
+<body>
+    <div class="ball ball1" style="margin-left:0"></div>
+    <div class="ball ball2" style="margin-left:0"></div>
+    <div class="ball ball3" style="margin-left:0"></div>
+    <script>
+        var ball1 = document.querySelector('.ball1')
+        var ball2 = document.querySelector('.ball2')
+        var ball3 = document.querySelector('.ball3')
+
+        //distance为目标位置
+        function animate(ball, distance, cb) {
+            setTimeout(function () {
+                var marginLeft = parseInt(ball.style.marginLeft, 10)
+                //球在目标位置
+                if (marginLeft == distance) {
+                    //会先判断cb这个function到底存不存在, 如果存在则执行cb()
+                    cb && cb()//调用cb,也就是动画完成的时候就交给下一个环节
+                }
+                else {
+                    //球在目标位置的左边，需要＋
+                    if (marginLeft < distance) {
+                        marginLeft++
+                    }
+                    //球在目标位置的右边，需要－
+                    else {
+                        marginLeft--
+                    }
+                    //调整球的位置
+                    ball.style.marginLeft = marginLeft + 'px'
+                    //不断地调整球的位置
+                    animate(ball, distance, cb)
+                }
+                //动画时间 ，多少毫秒执行，动画间隔时间越短，越流畅，一般为一秒钟60帧，平均一帧需要16.7ms，取13
+            }, 13)
+        }
+        /*用传统的方式来控制动画的流程*/
+        // //传第一个球，设置100像素，即让球从左侧往右侧移动100像素，移动完后移动第二个球
+        // animate(ball1, 100, function () {
+        //     //第二个球移动200像素
+        //     animate(ball2, 200, function () {
+        //         //第三个球移动300像素
+        //         animate(ball3, 300, function () {
+        //             //等到第三个球移动完毕后，继续移动第三个球,移动150像素
+        //             animate(ball3, 150, function () {
+        //                 //移动第二个球，移动150像素
+        //                 animate(ball2, 150, function () {
+        //                     //移动第一个球，移动150像素
+        //                     animate(ball1, 150, function () {
+
+        //                     })
+        //                 })
+        //             })
+
+        //         })
+        //     })
+        // })
+
+        var Promise = window.Promise
+        function promiseAnimate(ball, distance) {
+            //return一个Promise对象
+            return new Promise(function (resolve, reject) {
+                //distance为目标位置
+                //_animate,说明其为私有函数
+                function _animate() {
+                    setTimeout(function () {
+                        var marginLeft = parseInt(ball.style.marginLeft, 10)
+                        //球在目标位置
+                        if (marginLeft == distance) {
+                            //会先判断cb这个function到底存不存在, 如果存在则执行cb()
+                            resolve()
+                        }
+                        else {
+                            //球在目标位置的左边，需要＋
+                            if (marginLeft < distance) {
+                                marginLeft++
+                            }
+                            //球在目标位置的右边，需要－
+                            else {
+                                marginLeft--
+                            }
+                            //调整球的位置
+                            ball.style.marginLeft = marginLeft + 'px'
+                            //不断地调整球的位置
+                            _animate()
+                        }
+                        //动画时间 ，多少毫秒执行，动画间隔时间越短，越流畅，一般为一秒钟60帧，平均一帧需要16.7ms，取13
+                    }, 13)
+                }
+                //启用animate调用
+                _animate()
+            })
+        }
+        //执行第一个球的动画后
+        promiseAnimate(ball1, 100)
+            .then(function () {
+                //执行第二个球的动画，返回一个Promise对象返回
+                return promiseAnimate(ball2, 200)
+            })
+            .then(function () {
+                //执行第三个球的动画，返回一个Promise对象返回
+                return promiseAnimate(ball3, 300)
+            })
+            .then(function () {
+                return promiseAnimate(ball3, 150)
+            })
+            .then(function () {
+                return promiseAnimate(ball2, 150)
+            })
+            .then(function () {
+                return promiseAnimate(ball1, 150)
+            })
+
+            /*
+            Promise对象的三种状态
+            未完成(pending)
+            已完成(fulfilled)
+            失败(rejected)
+
+            Promise A与A+不同点
+            1.A+规范通过术语thenable来区分promise对象
+            2.A+定义onFulfilled/onRejected必须是作为函数来调用，而且调用过程必须是异步的
+            3.A+严格定义来then方法链式调用时onFulfilled/onRejected的调用顺序
+
+            Promise then方法
+            promiseObj.then(onFulfilled,onRejected)
+            //成功时的回调函数为上一个promise的值
+            onFulfilled=function(value){
+                return promiseObj2
+            }
+            //失败时，第一个参数为失败的原因
+            onRejected=function(err){
+
+            }
+            */
+
+    </script>
+</body>
+
+</html>
