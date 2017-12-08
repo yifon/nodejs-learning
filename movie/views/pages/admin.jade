@@ -4,7 +4,7 @@ block content
     .container  
         .row
             from.form-horizontal(method='post',action='/admin/movie')
-                iinput(type='hidden',name='movie[_id]',value='#{movie_id}')
+                input(type='hidden',name='movie[_id]',value='#{movie._id}')
                 .form-group 
                     label.col-sm-3.control-lable(for='inputTitle')电影名字
                     .col-sm-10

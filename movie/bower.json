@@ -1,0 +1,26 @@
+{
+  "name": "imooc movie learning",
+  "homepage": "https://github.com/yifon/nodejs-learning",
+  "authors": [
+    "yifon <yolina_379653734@qq.com>"
+  ],
+  "description": "imooc movie learning -June",
+  "main": "",
+  "keywords": [
+    "nodejs",
+    "mongodb"
+  ],
+  "license": "MIT",
+  "private": true,
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "public/libs",
+    "test",
+    "tests"
+  ],
+  "dependencies": {
+    "bootstrap": "^3.3.7"
+  }
+}

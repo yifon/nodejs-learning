@@ -1,3 +1,4 @@
+//传入mongoose的建模工具模块
 var mongoose = require('mongoose')
 //传入跟电影有关的字段和类型
 var MovieSchema = new mongoose.Schema({

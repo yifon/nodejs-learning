@@ -1,3 +1,4 @@
+//引入mongoose的建模工具模块
 var mongoose=require('mongoose')
 //引入movie文件导出的MovieSchema模块
 var MovieSchema=require('../schemas/movie')
