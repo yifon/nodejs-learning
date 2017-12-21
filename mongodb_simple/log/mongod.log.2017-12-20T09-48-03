@@ -1,0 +1,58 @@
+2017-12-20T11:44:03.849+0800 I CONTROL  [initandlisten] MongoDB starting : pid=877 port=12345 dbpath=/Users/oueikun/Desktop/web_task/imooc/mongodb_simple/data 64-bit host=208.165.136.219.broad.gz.gd.dynamic.163data.com.cn
+2017-12-20T11:44:03.849+0800 I CONTROL  [initandlisten] db version v3.4.10
+2017-12-20T11:44:03.849+0800 I CONTROL  [initandlisten] git version: 078f28920cb24de0dd479b5ea6c66c644f6326e9
+2017-12-20T11:44:03.849+0800 I CONTROL  [initandlisten] OpenSSL version: OpenSSL 1.0.2m  2 Nov 2017
+2017-12-20T11:44:03.849+0800 I CONTROL  [initandlisten] allocator: system
+2017-12-20T11:44:03.849+0800 I CONTROL  [initandlisten] modules: none
+2017-12-20T11:44:03.849+0800 I CONTROL  [initandlisten] build environment:
+2017-12-20T11:44:03.849+0800 I CONTROL  [initandlisten]     distarch: x86_64
+2017-12-20T11:44:03.849+0800 I CONTROL  [initandlisten]     target_arch: x86_64
+2017-12-20T11:44:03.849+0800 I CONTROL  [initandlisten] options: { config: "conf/mongod.conf", net: { port: 12345 }, processManagement: { fork: true }, storage: { dbPath: "data" }, systemLog: { destination: "file", path: "log/mongod.log" } }
+2017-12-20T11:44:03.849+0800 W -        [initandlisten] Detected unclean shutdown - /Users/oueikun/Desktop/web_task/imooc/mongodb_simple/data/mongod.lock is not empty.
+2017-12-20T11:44:03.851+0800 I -        [initandlisten] Detected data files in /Users/oueikun/Desktop/web_task/imooc/mongodb_simple/data created by the 'wiredTiger' storage engine, so setting the active storage engine to 'wiredTiger'.
+2017-12-20T11:44:03.851+0800 W STORAGE  [initandlisten] Recovering data from the last clean checkpoint.
+2017-12-20T11:44:03.851+0800 I STORAGE  [initandlisten] wiredtiger_open config: create,cache_size=3584M,session_max=20000,eviction=(threads_min=4,threads_max=4),config_base=false,statistics=(fast),log=(enabled=true,archive=true,path=journal,compressor=snappy),file_manager=(close_idle_time=100000),checkpoint=(wait=60,log_size=2GB),statistics_log=(wait=0),
+2017-12-20T11:44:04.495+0800 I CONTROL  [initandlisten] 
+2017-12-20T11:44:04.495+0800 I CONTROL  [initandlisten] ** WARNING: Access control is not enabled for the database.
+2017-12-20T11:44:04.495+0800 I CONTROL  [initandlisten] **          Read and write access to data and configuration is unrestricted.
+2017-12-20T11:44:04.495+0800 I CONTROL  [initandlisten] 
+2017-12-20T11:44:04.594+0800 I FTDC     [initandlisten] Initializing full-time diagnostic data capture with directory '/Users/oueikun/Desktop/web_task/imooc/mongodb_simple/data/diagnostic.data'
+2017-12-20T11:44:04.595+0800 I NETWORK  [thread1] waiting for connections on port 12345
+2017-12-20T11:44:05.010+0800 I FTDC     [ftdc] Unclean full-time diagnostic data capture shutdown detected, found interim file, some metrics may have been lost. OK
+2017-12-20T11:44:24.926+0800 I NETWORK  [thread1] connection accepted from 127.0.0.1:49471 #1 (1 connection now open)
+2017-12-20T11:44:24.927+0800 I NETWORK  [conn1] received client metadata from 127.0.0.1:49471 conn1: { application: { name: "MongoDB Shell" }, driver: { name: "MongoDB Internal Client", version: "3.4.10" }, os: { type: "Darwin", name: "Mac OS X", architecture: "x86_64", version: "15.6.0" } }
+2017-12-20T11:46:09.587+0800 I INDEX    [conn1] build index on: imooc.imooc_2 properties: { v: 2, key: { x: 1.0, y: -1.0 }, name: "x_1_y_-1", ns: "imooc.imooc_2" }
+2017-12-20T11:46:09.587+0800 I INDEX    [conn1] 	 building index using bulk method; build may temporarily use up to 500 megabytes of RAM
+2017-12-20T11:46:09.599+0800 I INDEX    [conn1] build index done.  scanned 9 total records. 0 secs
+2017-12-20T12:56:01.506+0800 I INDEX    [conn1] build index on: imooc.imooc_2 properties: { v: 2, key: { x: 1.0, y: 1.0, z: 1.0, m: 1.0 }, name: "normal_index", ns: "imooc.imooc_2" }
+2017-12-20T12:56:01.506+0800 I INDEX    [conn1] 	 building index using bulk method; build may temporarily use up to 500 megabytes of RAM
+2017-12-20T12:56:01.519+0800 I INDEX    [conn1] build index done.  scanned 9 total records. 0 secs
+2017-12-20T12:57:01.567+0800 I COMMAND  [conn1] CMD: dropIndexes imooc.imooc_2
+2017-12-20T12:58:04.340+0800 I COMMAND  [conn1] CMD: dropIndexes imooc.imooc_2
+2017-12-20T13:01:58.209+0800 I INDEX    [conn1] build index on: imooc.imooc_2 properties: { v: 2, unique: true, key: { m: 1.0, n: 1.0 }, name: "m_1_n_1", ns: "imooc.imooc_2" }
+2017-12-20T13:01:58.209+0800 I INDEX    [conn1] 	 building index using bulk method; build may temporarily use up to 500 megabytes of RAM
+2017-12-20T13:02:52.541+0800 I INDEX    [conn1] build index on: imooc.imooc_2 properties: { v: 2, unique: true, key: { m: 1.0, n: 2.0 }, name: "m_1_n_2", ns: "imooc.imooc_2" }
+2017-12-20T13:02:52.541+0800 I INDEX    [conn1] 	 building index using bulk method; build may temporarily use up to 500 megabytes of RAM
+2017-12-20T13:03:34.793+0800 I INDEX    [conn1] build index on: imooc.imooc_2 properties: { v: 2, key: { m: 1.0, n: 2.0 }, name: "m_1_n_2", ns: "imooc.imooc_2" }
+2017-12-20T13:03:34.793+0800 I INDEX    [conn1] 	 building index using bulk method; build may temporarily use up to 500 megabytes of RAM
+2017-12-20T13:03:34.806+0800 I INDEX    [conn1] build index done.  scanned 9 total records. 0 secs
+2017-12-20T13:09:31.868+0800 I INDEX    [conn1] build index on: imooc.imooc_2 properties: { v: 2, key: { m: 1.0 }, name: "m_1", ns: "imooc.imooc_2", sparse: true }
+2017-12-20T13:09:31.868+0800 I INDEX    [conn1] 	 building index using bulk method; build may temporarily use up to 500 megabytes of RAM
+2017-12-20T13:09:31.880+0800 I INDEX    [conn1] build index done.  scanned 11 total records. 0 secs
+2017-12-20T13:21:06.335+0800 I INDEX    [conn1] build index on: imooc.location properties: { v: 2, key: { w: "2d" }, name: "w_2d", ns: "imooc.location" }
+2017-12-20T13:21:06.335+0800 I INDEX    [conn1] 	 building index using bulk method; build may temporarily use up to 500 megabytes of RAM
+2017-12-20T13:21:06.347+0800 I INDEX    [conn1] build index done.  scanned 0 total records. 0 secs
+2017-12-20T17:49:01.455+0800 I NETWORK  [thread1] connection accepted from 127.0.0.1:51016 #2 (2 connections now open)
+2017-12-20T17:49:16.454+0800 I NETWORK  [thread1] connection accepted from 127.0.0.1:51018 #3 (3 connections now open)
+2017-12-20T18:26:01.920+0800 I -        [conn1] Creating profile collection: imooc.system.profile
+2017-12-20T18:43:21.936+0800 I CONTROL  [signalProcessingThread] got signal 15 (Terminated: 15), will terminate after current cmd ends
+2017-12-20T18:43:21.937+0800 I NETWORK  [signalProcessingThread] shutdown: going to close listening sockets...
+2017-12-20T18:43:21.937+0800 I NETWORK  [signalProcessingThread] closing listening socket: 7
+2017-12-20T18:43:21.938+0800 I NETWORK  [signalProcessingThread] closing listening socket: 8
+2017-12-20T18:43:21.938+0800 I NETWORK  [signalProcessingThread] removing socket file: /tmp/mongodb-12345.sock
+2017-12-20T18:43:21.938+0800 I NETWORK  [signalProcessingThread] shutdown: going to flush diaglog...
+2017-12-20T18:43:21.938+0800 I FTDC     [signalProcessingThread] Shutting down full-time diagnostic data capture
+2017-12-20T18:43:21.940+0800 I STORAGE  [signalProcessingThread] WiredTigerKVEngine shutting down
+2017-12-20T18:43:22.178+0800 I STORAGE  [signalProcessingThread] shutdown: removing fs lock...
+2017-12-20T18:43:22.179+0800 I CONTROL  [signalProcessingThread] now exiting
+2017-12-20T18:43:22.179+0800 I CONTROL  [signalProcessingThread] shutting down with code:0

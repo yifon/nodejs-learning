@@ -6,7 +6,7 @@ block content
             from.form-horizontal(method='post',action='/admin/movie')
                 input(type='hidden',name='movie[_id]',value='#{movie._id}')
                 .form-group 
-                    label.col-sm-3.control-lable(for='inputTitle')电影名字
+                slabel.col-sm-3.control-lable(for='inputTitle')电影名字
                     .col-sm-10
                         input#inputTitle.form-control(type='text',name='movie[title]',value='#{movie.title}')
          

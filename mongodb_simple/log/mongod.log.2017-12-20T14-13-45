@@ -1,0 +1,54 @@
+2017-12-20T19:47:58.767+0800 I CONTROL  [initandlisten] MongoDB starting : pid=7259 port=12345 dbpath=/Users/oueikun/Desktop/web_task/imooc/mongodb_simple/./data/ 64-bit host=208.165.136.219.broad.gz.gd.dynamic.163data.com.cn
+2017-12-20T19:47:58.767+0800 I CONTROL  [initandlisten] db version v3.4.10
+2017-12-20T19:47:58.767+0800 I CONTROL  [initandlisten] git version: 078f28920cb24de0dd479b5ea6c66c644f6326e9
+2017-12-20T19:47:58.767+0800 I CONTROL  [initandlisten] OpenSSL version: OpenSSL 1.0.2m  2 Nov 2017
+2017-12-20T19:47:58.767+0800 I CONTROL  [initandlisten] allocator: system
+2017-12-20T19:47:58.767+0800 I CONTROL  [initandlisten] modules: none
+2017-12-20T19:47:58.767+0800 I CONTROL  [initandlisten] build environment:
+2017-12-20T19:47:58.767+0800 I CONTROL  [initandlisten]     distarch: x86_64
+2017-12-20T19:47:58.767+0800 I CONTROL  [initandlisten]     target_arch: x86_64
+2017-12-20T19:47:58.767+0800 I CONTROL  [initandlisten] options: { config: "conf/mongod.conf", net: { port: 12345 }, processManagement: { fork: true }, security: { authorization: "enabled" }, storage: { dbPath: "./data/" }, systemLog: { destination: "file", path: "./log/mongod.log" } }
+2017-12-20T19:47:58.770+0800 I -        [initandlisten] Detected data files in /Users/oueikun/Desktop/web_task/imooc/mongodb_simple/./data/ created by the 'wiredTiger' storage engine, so setting the active storage engine to 'wiredTiger'.
+2017-12-20T19:47:58.770+0800 I STORAGE  [initandlisten] wiredtiger_open config: create,cache_size=3584M,session_max=20000,eviction=(threads_min=4,threads_max=4),config_base=false,statistics=(fast),log=(enabled=true,archive=true,path=journal,compressor=snappy),file_manager=(close_idle_time=100000),checkpoint=(wait=60,log_size=2GB),statistics_log=(wait=0),
+2017-12-20T19:47:59.551+0800 I FTDC     [initandlisten] Initializing full-time diagnostic data capture with directory '/Users/oueikun/Desktop/web_task/imooc/mongodb_simple/./data/diagnostic.data'
+2017-12-20T19:47:59.551+0800 I NETWORK  [thread1] waiting for connections on port 12345
+2017-12-20T19:48:02.945+0800 I NETWORK  [thread1] connection accepted from 127.0.0.1:53543 #1 (1 connection now open)
+2017-12-20T19:48:02.945+0800 I NETWORK  [conn1] received client metadata from 127.0.0.1:53543 conn1: { application: { name: "MongoDB Shell" }, driver: { name: "MongoDB Internal Client", version: "3.4.10" }, os: { type: "Darwin", name: "Mac OS X", architecture: "x86_64", version: "15.6.0" } }
+2017-12-20T19:48:02.947+0800 I ACCESS   [conn1] Unauthorized: not authorized on admin to execute command { getLog: "startupWarnings" }
+2017-12-20T19:48:02.948+0800 I ACCESS   [conn1] Unauthorized: not authorized on admin to execute command { replSetGetStatus: 1.0, forShell: 1.0 }
+2017-12-20T19:49:09.119+0800 I NETWORK  [thread1] connection accepted from 127.0.0.1:53556 #2 (2 connections now open)
+2017-12-20T19:49:09.119+0800 I NETWORK  [conn2] received client metadata from 127.0.0.1:53556 conn2: { application: { name: "MongoDB Shell" }, driver: { name: "MongoDB Internal Client", version: "3.4.10" }, os: { type: "Darwin", name: "Mac OS X", architecture: "x86_64", version: "15.6.0" } }
+2017-12-20T19:49:09.121+0800 I ACCESS   [conn2] Unauthorized: not authorized on admin to execute command { getLog: "startupWarnings" }
+2017-12-20T19:49:09.126+0800 I ACCESS   [conn2] Unauthorized: not authorized on admin to execute command { replSetGetStatus: 1.0, forShell: 1.0 }
+2017-12-20T19:49:16.431+0800 I ACCESS   [conn2] Unauthorized: not authorized on imooc to execute command { listCollections: 1.0, filter: {} }
+2017-12-20T19:49:23.720+0800 I -        [conn2] end connection 127.0.0.1:53556 (2 connections now open)
+2017-12-20T19:49:31.796+0800 I NETWORK  [thread1] connection accepted from 127.0.0.1:53563 #3 (2 connections now open)
+2017-12-20T19:49:31.796+0800 I NETWORK  [conn3] received client metadata from 127.0.0.1:53563 conn3: { application: { name: "MongoDB Shell" }, driver: { name: "MongoDB Internal Client", version: "3.4.10" }, os: { type: "Darwin", name: "Mac OS X", architecture: "x86_64", version: "15.6.0" } }
+2017-12-20T19:49:31.826+0800 I ACCESS   [conn3] Successfully authenticated as principal imooc on test
+2017-12-20T19:49:31.827+0800 I ACCESS   [conn3] Unauthorized: not authorized on admin to execute command { getLog: "startupWarnings" }
+2017-12-20T19:49:31.828+0800 I ACCESS   [conn3] Unauthorized: not authorized on admin to execute command { replSetGetStatus: 1.0, forShell: 1.0 }
+2017-12-20T19:49:48.836+0800 I ACCESS   [conn3] Unauthorized: not authorized on imooc to execute command { listCollections: 1.0, filter: {} }
+2017-12-20T19:50:29.223+0800 I ACCESS   [conn3] Unauthorized: not authorized on test to execute command { insert: "imooc", documents: [ { _id: ObjectId('5a3a4e85451037daa223516d'), x: 1.0 } ], ordered: true }
+2017-12-20T22:14:18.599+0800 I NETWORK  [thread1] connection accepted from 127.0.0.1:55150 #4 (3 connections now open)
+2017-12-20T22:14:18.618+0800 I NETWORK  [conn4] received client metadata from 127.0.0.1:55150 conn4: { driver: { name: "nodejs", version: "2.2.33" }, os: { type: "Darwin", name: "darwin", architecture: "x64", version: "15.6.0" }, platform: "Node.js v8.9.1, LE, mongodb-core: 2.1.17" }
+2017-12-20T22:15:12.925+0800 I ACCESS   [conn4] Unauthorized: not authorized on imooc to execute command { find: "movies", filter: {}, sort: { meta.updateAt: 1 }, projection: {} }
+2017-12-20T22:16:05.856+0800 I ACCESS   [conn3] Unauthorized: not authorized on imooc to execute command { find: "movies", filter: {} }
+2017-12-20T22:20:14.348+0800 I ACCESS   [conn3] Unauthorized: not authorized on admin to execute command { listDatabases: 1.0 }
+2017-12-20T22:20:25.921+0800 I -        [conn3] end connection 127.0.0.1:53563 (3 connections now open)
+2017-12-20T22:20:30.302+0800 I NETWORK  [thread1] connection accepted from 127.0.0.1:55284 #5 (3 connections now open)
+2017-12-20T22:20:30.302+0800 I NETWORK  [conn5] received client metadata from 127.0.0.1:55284 conn5: { application: { name: "MongoDB Shell" }, driver: { name: "MongoDB Internal Client", version: "3.4.10" }, os: { type: "Darwin", name: "Mac OS X", architecture: "x86_64", version: "15.6.0" } }
+2017-12-20T22:20:30.304+0800 I ACCESS   [conn5] Unauthorized: not authorized on admin to execute command { getLog: "startupWarnings" }
+2017-12-20T22:20:30.306+0800 I ACCESS   [conn5] Unauthorized: not authorized on admin to execute command { replSetGetStatus: 1.0, forShell: 1.0 }
+2017-12-20T22:20:35.041+0800 I ACCESS   [conn5] Unauthorized: not authorized on admin to execute command { listDatabases: 1.0 }
+2017-12-20T22:21:15.246+0800 I -        [conn5] end connection 127.0.0.1:55284 (3 connections now open)
+2017-12-20T22:21:35.252+0800 I CONTROL  [signalProcessingThread] got signal 15 (Terminated: 15), will terminate after current cmd ends
+2017-12-20T22:21:35.252+0800 I NETWORK  [signalProcessingThread] shutdown: going to close listening sockets...
+2017-12-20T22:21:35.252+0800 I NETWORK  [signalProcessingThread] closing listening socket: 7
+2017-12-20T22:21:35.252+0800 I NETWORK  [signalProcessingThread] closing listening socket: 8
+2017-12-20T22:21:35.252+0800 I NETWORK  [signalProcessingThread] removing socket file: /tmp/mongodb-12345.sock
+2017-12-20T22:21:35.254+0800 I NETWORK  [signalProcessingThread] shutdown: going to flush diaglog...
+2017-12-20T22:21:35.254+0800 I FTDC     [signalProcessingThread] Shutting down full-time diagnostic data capture
+2017-12-20T22:21:35.256+0800 I STORAGE  [signalProcessingThread] WiredTigerKVEngine shutting down
+2017-12-20T22:21:35.494+0800 I STORAGE  [signalProcessingThread] shutdown: removing fs lock...
+2017-12-20T22:21:35.496+0800 I CONTROL  [signalProcessingThread] now exiting
+2017-12-20T22:21:35.496+0800 I CONTROL  [signalProcessingThread] shutting down with code:0

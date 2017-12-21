@@ -25,7 +25,7 @@ var port = process.env.PORT || 3000
 var app = express()//启动一个web服务器，将实例赋予给app变量
 
 //连接本地数据库
-mongoose.connect('mongodb://localhost/imooc/movie')
+mongoose.connect('mongodb://localhost:12345/imooc')
 
 app.set('views', './views/pages')//设置视图的根目录
 app.set('view engine', 'jade')//设置默认的模版引擎

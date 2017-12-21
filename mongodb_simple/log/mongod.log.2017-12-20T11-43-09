@@ -1,0 +1,31 @@
+2017-12-20T19:40:04.197+0800 I CONTROL  [initandlisten] MongoDB starting : pid=6960 port=12345 dbpath=/Users/oueikun/Desktop/web_task/imooc/mongodb_simple/./data/ 64-bit host=208.165.136.219.broad.gz.gd.dynamic.163data.com.cn
+2017-12-20T19:40:04.197+0800 I CONTROL  [initandlisten] db version v3.4.10
+2017-12-20T19:40:04.197+0800 I CONTROL  [initandlisten] git version: 078f28920cb24de0dd479b5ea6c66c644f6326e9
+2017-12-20T19:40:04.197+0800 I CONTROL  [initandlisten] OpenSSL version: OpenSSL 1.0.2m  2 Nov 2017
+2017-12-20T19:40:04.197+0800 I CONTROL  [initandlisten] allocator: system
+2017-12-20T19:40:04.197+0800 I CONTROL  [initandlisten] modules: none
+2017-12-20T19:40:04.197+0800 I CONTROL  [initandlisten] build environment:
+2017-12-20T19:40:04.197+0800 I CONTROL  [initandlisten]     distarch: x86_64
+2017-12-20T19:40:04.197+0800 I CONTROL  [initandlisten]     target_arch: x86_64
+2017-12-20T19:40:04.197+0800 I CONTROL  [initandlisten] options: { config: "conf/mongod.conf", net: { port: 12345 }, processManagement: { fork: true }, security: { authorization: "enabled" }, storage: { dbPath: "./data/" }, systemLog: { destination: "file", path: "./log/mongod.log" } }
+2017-12-20T19:40:04.198+0800 I -        [initandlisten] Detected data files in /Users/oueikun/Desktop/web_task/imooc/mongodb_simple/./data/ created by the 'wiredTiger' storage engine, so setting the active storage engine to 'wiredTiger'.
+2017-12-20T19:40:04.199+0800 I STORAGE  [initandlisten] wiredtiger_open config: create,cache_size=3584M,session_max=20000,eviction=(threads_min=4,threads_max=4),config_base=false,statistics=(fast),log=(enabled=true,archive=true,path=journal,compressor=snappy),file_manager=(close_idle_time=100000),checkpoint=(wait=60,log_size=2GB),statistics_log=(wait=0),
+2017-12-20T19:40:04.879+0800 I FTDC     [initandlisten] Initializing full-time diagnostic data capture with directory '/Users/oueikun/Desktop/web_task/imooc/mongodb_simple/./data/diagnostic.data'
+2017-12-20T19:40:04.879+0800 I NETWORK  [thread1] waiting for connections on port 12345
+2017-12-20T19:41:04.603+0800 I NETWORK  [thread1] connection accepted from 127.0.0.1:53403 #1 (1 connection now open)
+2017-12-20T19:41:04.604+0800 I ACCESS   [conn1] note: no users configured in admin.system.users, allowing localhost access
+2017-12-20T19:41:04.604+0800 I NETWORK  [conn1] received client metadata from 127.0.0.1:53403 conn1: { application: { name: "MongoDB Shell" }, driver: { name: "MongoDB Internal Client", version: "3.4.10" }, os: { type: "Darwin", name: "Mac OS X", architecture: "x86_64", version: "15.6.0" } }
+2017-12-20T19:41:04.609+0800 I ACCESS   [conn1] Unauthorized: not authorized on admin to execute command { getLog: "startupWarnings" }
+2017-12-20T19:41:48.810+0800 I ACCESS   [conn1] SCRAM-SHA-1 authentication failed for imooc on test from client 127.0.0.1:53403 ; UserNotFound: Could not find user imooc@test
+2017-12-20T19:42:53.563+0800 I -        [conn1] end connection 127.0.0.1:53403 (1 connection now open)
+2017-12-20T19:43:03.895+0800 I CONTROL  [signalProcessingThread] got signal 15 (Terminated: 15), will terminate after current cmd ends
+2017-12-20T19:43:03.895+0800 I NETWORK  [signalProcessingThread] shutdown: going to close listening sockets...
+2017-12-20T19:43:03.895+0800 I NETWORK  [signalProcessingThread] closing listening socket: 7
+2017-12-20T19:43:03.895+0800 I NETWORK  [signalProcessingThread] closing listening socket: 8
+2017-12-20T19:43:03.895+0800 I NETWORK  [signalProcessingThread] removing socket file: /tmp/mongodb-12345.sock
+2017-12-20T19:43:03.895+0800 I NETWORK  [signalProcessingThread] shutdown: going to flush diaglog...
+2017-12-20T19:43:03.895+0800 I FTDC     [signalProcessingThread] Shutting down full-time diagnostic data capture
+2017-12-20T19:43:03.898+0800 I STORAGE  [signalProcessingThread] WiredTigerKVEngine shutting down
+2017-12-20T19:43:04.036+0800 I STORAGE  [signalProcessingThread] shutdown: removing fs lock...
+2017-12-20T19:43:04.037+0800 I CONTROL  [signalProcessingThread] now exiting
+2017-12-20T19:43:04.037+0800 I CONTROL  [signalProcessingThread] shutting down with code:0

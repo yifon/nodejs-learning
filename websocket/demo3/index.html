@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Websocket</title>
+</head>
+
+<body>
+    <h1>Chat Room</h1>
+    <input type="text" id="sendTxt">
+    <button id="sendBtn">发送</button>
+
+    <script>
+        var websocket = new WebSocket("ws://localhost:3000");
+        function showMessage(str){
+            var div=document.createElement('div');
+            div.innerHTML=str;
+            document.body.appendChild(div);
+        }
+        //当连接建立后，会调用回调函数onopen
+        websocket.onopen = function () {
+            console.log('websocket open');
+            document.getElementById("sendBtn").onclick = function () {
+                var txt = document.getElementById("sendTxt").value;
+                //当文本不为空时，发送
+                if(txt){
+                    websocket.send(txt);
+                }
+        }
+        websocket.onclose = function () {
+            console.log('websocket close');
+        }
+        //当接收到消息时，要把其变成一个div,添加到body中
+        websocket.onmessage = function (e) {
+            console.log(e.data);
+            showMessage(e.data);
+        }
+        }
+    </script>
+</body>
+
+</html>

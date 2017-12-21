@@ -1,0 +1,15 @@
+2017-12-20T19:39:30.115+0800 I CONTROL  [initandlisten] MongoDB starting : pid=6931 port=12345 dbpath=/Users/oueikun/Desktop/web_task/imooc/mongodb_simple/data 64-bit host=208.165.136.219.broad.gz.gd.dynamic.163data.com.cn
+2017-12-20T19:39:30.115+0800 I CONTROL  [initandlisten] db version v3.4.10
+2017-12-20T19:39:30.115+0800 I CONTROL  [initandlisten] git version: 078f28920cb24de0dd479b5ea6c66c644f6326e9
+2017-12-20T19:39:30.115+0800 I CONTROL  [initandlisten] OpenSSL version: OpenSSL 1.0.2m  2 Nov 2017
+2017-12-20T19:39:30.115+0800 I CONTROL  [initandlisten] allocator: system
+2017-12-20T19:39:30.115+0800 I CONTROL  [initandlisten] modules: none
+2017-12-20T19:39:30.115+0800 I CONTROL  [initandlisten] build environment:
+2017-12-20T19:39:30.115+0800 I CONTROL  [initandlisten]     distarch: x86_64
+2017-12-20T19:39:30.115+0800 I CONTROL  [initandlisten]     target_arch: x86_64
+2017-12-20T19:39:30.115+0800 I CONTROL  [initandlisten] options: { config: "conf/mongod.conf", net: { port: 12345 }, processManagement: { fork: true }, security: { authorization: "enabled" }, storage: { dbPath: "data" }, systemLog: { destination: "file", path: "log/mongod.log" } }
+2017-12-20T19:39:30.115+0800 I STORAGE  [initandlisten] exception in initAndListen: 98 Unable to lock file: /Users/oueikun/Desktop/web_task/imooc/mongodb_simple/data/mongod.lock Resource temporarily unavailable. Is a mongod instance already running?, terminating
+2017-12-20T19:39:30.115+0800 I NETWORK  [initandlisten] shutdown: going to close listening sockets...
+2017-12-20T19:39:30.115+0800 I NETWORK  [initandlisten] shutdown: going to flush diaglog...
+2017-12-20T19:39:30.115+0800 I CONTROL  [initandlisten] now exiting
+2017-12-20T19:39:30.115+0800 I CONTROL  [initandlisten] shutting down with code:100

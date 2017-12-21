@@ -1,0 +1,60 @@
+2017-12-20T18:46:38.418+0800 I CONTROL  [initandlisten] MongoDB starting : pid=5464 port=12345 dbpath=/Users/oueikun/Desktop/web_task/imooc/mongodb_simple/./data/ 64-bit host=208.165.136.219.broad.gz.gd.dynamic.163data.com.cn
+2017-12-20T18:46:38.418+0800 I CONTROL  [initandlisten] db version v3.4.10
+2017-12-20T18:46:38.418+0800 I CONTROL  [initandlisten] git version: 078f28920cb24de0dd479b5ea6c66c644f6326e9
+2017-12-20T18:46:38.418+0800 I CONTROL  [initandlisten] OpenSSL version: OpenSSL 1.0.2m  2 Nov 2017
+2017-12-20T18:46:38.418+0800 I CONTROL  [initandlisten] allocator: system
+2017-12-20T18:46:38.418+0800 I CONTROL  [initandlisten] modules: none
+2017-12-20T18:46:38.418+0800 I CONTROL  [initandlisten] build environment:
+2017-12-20T18:46:38.418+0800 I CONTROL  [initandlisten]     distarch: x86_64
+2017-12-20T18:46:38.418+0800 I CONTROL  [initandlisten]     target_arch: x86_64
+2017-12-20T18:46:38.418+0800 I CONTROL  [initandlisten] options: { config: "conf/mongod.conf", net: { port: 12345 }, processManagement: { fork: true }, security: { authorization: "enabled" }, storage: { dbPath: "./data/" }, systemLog: { destination: "file", path: "./log/mongod.log" } }
+2017-12-20T18:46:38.420+0800 I -        [initandlisten] Detected data files in /Users/oueikun/Desktop/web_task/imooc/mongodb_simple/./data/ created by the 'wiredTiger' storage engine, so setting the active storage engine to 'wiredTiger'.
+2017-12-20T18:46:38.420+0800 I STORAGE  [initandlisten] wiredtiger_open config: create,cache_size=3584M,session_max=20000,eviction=(threads_min=4,threads_max=4),config_base=false,statistics=(fast),log=(enabled=true,archive=true,path=journal,compressor=snappy),file_manager=(close_idle_time=100000),checkpoint=(wait=60,log_size=2GB),statistics_log=(wait=0),
+2017-12-20T18:46:39.300+0800 I FTDC     [initandlisten] Initializing full-time diagnostic data capture with directory '/Users/oueikun/Desktop/web_task/imooc/mongodb_simple/./data/diagnostic.data'
+2017-12-20T18:46:39.301+0800 I NETWORK  [thread1] waiting for connections on port 12345
+2017-12-20T18:47:27.836+0800 I NETWORK  [thread1] connection accepted from 127.0.0.1:52078 #1 (1 connection now open)
+2017-12-20T18:47:27.836+0800 I ACCESS   [conn1] note: no users configured in admin.system.users, allowing localhost access
+2017-12-20T18:47:27.836+0800 I NETWORK  [conn1] received client metadata from 127.0.0.1:52078 conn1: { application: { name: "MongoDB Shell" }, driver: { name: "MongoDB Internal Client", version: "3.4.10" }, os: { type: "Darwin", name: "Mac OS X", architecture: "x86_64", version: "15.6.0" } }
+2017-12-20T18:47:27.839+0800 I ACCESS   [conn1] Unauthorized: not authorized on admin to execute command { getLog: "startupWarnings" }
+2017-12-20T19:00:52.789+0800 I ACCESS   [conn1] TypeMismatch: "customData" had the wrong type. Expected object, found string
+2017-12-20T19:02:33.701+0800 I ACCESS   [conn1] NoSuchKey: Missing expected field "role"
+2017-12-20T19:03:37.450+0800 I ACCESS   [conn1] Unauthorized: not authorized on test to execute command { createUser: "imooc", pwd: "xxx", roles: [ { role: "userAdmin", db: "admin" }, { role: "read", db: "test" } ], digestPassword: false, writeConcern: { w: "majority", wtimeout: 600000.0 } }
+2017-12-20T19:08:08.950+0800 I ACCESS   [conn1] Unauthorized: not authorized on admin to execute command { createUser: "imooc", pwd: "xxx", roles: [ { role: "userAdmin", db: "admin" }, { role: "read", db: "test" } ], digestPassword: false, writeConcern: { w: "majority", wtimeout: 600000.0 } }
+2017-12-20T19:09:00.891+0800 I ACCESS   [conn1] Unauthorized: not authorized on admin to execute command { dropUser: "test", writeConcern: { w: "majority", wtimeout: 600000.0 } }
+2017-12-20T19:09:49.106+0800 I ACCESS   [conn1] Unauthorized: not authorized on admin to execute command { find: "system.users", filter: {} }
+2017-12-20T19:15:48.012+0800 I ACCESS   [conn1] Unauthorized: not authorized on admin to execute command { createUser: "imooc", pwd: "xxx", roles: [ { role: "userAdmin", db: "admin" }, { role: "read", db: "test" } ], digestPassword: false, writeConcern: { w: "majority", wtimeout: 600000.0 } }
+2017-12-20T19:22:09.139+0800 I ACCESS   [conn1] NoSuchKey: Missing expected field "role"
+2017-12-20T19:23:25.772+0800 I ACCESS   [conn1] Unauthorized: not authorized on admin to execute command { createUser: "imooc", pwd: "xxx", roles: [ { role: "userAdmin", db: "imooc" } ], digestPassword: false, writeConcern: { w: "majority", wtimeout: 600000.0 } }
+2017-12-20T19:23:51.289+0800 I ACCESS   [conn1] Unauthorized: not authorized on admin to execute command { grantRolesToUser: "admin", roles: [ { role: "root", db: "imooc" } ], writeConcern: { w: "majority", wtimeout: 600000.0 } }
+2017-12-20T19:24:40.245+0800 I -        [conn1] end connection 127.0.0.1:52078 (1 connection now open)
+2017-12-20T19:25:07.710+0800 I NETWORK  [thread1] connection accepted from 127.0.0.1:53006 #2 (1 connection now open)
+2017-12-20T19:25:07.711+0800 I NETWORK  [conn2] received client metadata from 127.0.0.1:53006 conn2: { application: { name: "MongoDB Shell" }, driver: { name: "MongoDB Internal Client", version: "3.4.10" }, os: { type: "Darwin", name: "Mac OS X", architecture: "x86_64", version: "15.6.0" } }
+2017-12-20T19:25:07.713+0800 I ACCESS   [conn2] Unauthorized: not authorized on admin to execute command { getLog: "startupWarnings" }
+2017-12-20T19:25:22.461+0800 I ACCESS   [conn2] Unauthorized: not authorized on imooc to execute command { listCollections: 1.0, filter: {} }
+2017-12-20T19:26:16.135+0800 I -        [conn2] end connection 127.0.0.1:53006 (1 connection now open)
+2017-12-20T19:26:26.363+0800 I NETWORK  [thread1] connection accepted from 127.0.0.1:53019 #3 (1 connection now open)
+2017-12-20T19:26:26.364+0800 I NETWORK  [conn3] received client metadata from 127.0.0.1:53019 conn3: { application: { name: "MongoDB Shell" }, driver: { name: "MongoDB Internal Client", version: "3.4.10" }, os: { type: "Darwin", name: "Mac OS X", architecture: "x86_64", version: "15.6.0" } }
+2017-12-20T19:26:26.373+0800 I ACCESS   [conn3] SCRAM-SHA-1 authentication failed for imooc on test from client 127.0.0.1:53019 ; UserNotFound: Could not find user imooc@test
+2017-12-20T19:26:26.378+0800 I -        [conn3] end connection 127.0.0.1:53019 (1 connection now open)
+2017-12-20T19:27:07.996+0800 I NETWORK  [thread1] connection accepted from 127.0.0.1:53027 #4 (1 connection now open)
+2017-12-20T19:27:07.996+0800 I NETWORK  [conn4] received client metadata from 127.0.0.1:53027 conn4: { application: { name: "MongoDB Shell" }, driver: { name: "MongoDB Internal Client", version: "3.4.10" }, os: { type: "Darwin", name: "Mac OS X", architecture: "x86_64", version: "15.6.0" } }
+2017-12-20T19:27:08.002+0800 I ACCESS   [conn4] SCRAM-SHA-1 authentication failed for imooc on test from client 127.0.0.1:53027 ; UserNotFound: Could not find user imooc@test
+2017-12-20T19:27:08.004+0800 I -        [conn4] end connection 127.0.0.1:53027 (1 connection now open)
+2017-12-20T19:28:55.653+0800 I NETWORK  [thread1] connection accepted from 127.0.0.1:53159 #5 (1 connection now open)
+2017-12-20T19:28:55.655+0800 I NETWORK  [conn5] received client metadata from 127.0.0.1:53159 conn5: { application: { name: "MongoDB Shell" }, driver: { name: "MongoDB Internal Client", version: "3.4.10" }, os: { type: "Darwin", name: "Mac OS X", architecture: "x86_64", version: "15.6.0" } }
+2017-12-20T19:28:55.656+0800 I ACCESS   [conn5] Unauthorized: not authorized on admin to execute command { getLog: "startupWarnings" }
+2017-12-20T19:31:13.774+0800 I ACCESS   [conn5] Unauthorized: not authorized on test to execute command { createUser: "imooc", pwd: "xxx", roles: [ { role: "userAdmin", db: "admin" }, { role: "read", db: "test" } ], digestPassword: false, writeConcern: { w: "majority", wtimeout: 600000.0 } }
+2017-12-20T19:31:41.166+0800 I ACCESS   [conn5] Unauthorized: not authorized on admin to execute command { listDatabases: 1.0 }
+2017-12-20T19:33:15.137+0800 I ACCESS   [conn5] Unauthorized: not authorized on test to execute command { createUser: "imooc", pwd: "xxx", roles: [ { role: "userAdmin", db: "admin" }, { role: "userAdmin", db: "imooc" } ], digestPassword: false, writeConcern: { w: "majority", wtimeout: 600000.0 } }
+2017-12-20T19:36:43.344+0800 I -        [conn5] end connection 127.0.0.1:53159 (1 connection now open)
+2017-12-20T19:40:01.422+0800 I CONTROL  [signalProcessingThread] got signal 15 (Terminated: 15), will terminate after current cmd ends
+2017-12-20T19:40:01.423+0800 I NETWORK  [signalProcessingThread] shutdown: going to close listening sockets...
+2017-12-20T19:40:01.423+0800 I NETWORK  [signalProcessingThread] closing listening socket: 7
+2017-12-20T19:40:01.423+0800 I NETWORK  [signalProcessingThread] closing listening socket: 8
+2017-12-20T19:40:01.423+0800 I NETWORK  [signalProcessingThread] removing socket file: /tmp/mongodb-12345.sock
+2017-12-20T19:40:01.424+0800 I NETWORK  [signalProcessingThread] shutdown: going to flush diaglog...
+2017-12-20T19:40:01.424+0800 I FTDC     [signalProcessingThread] Shutting down full-time diagnostic data capture
+2017-12-20T19:40:01.426+0800 I STORAGE  [signalProcessingThread] WiredTigerKVEngine shutting down
+2017-12-20T19:40:01.644+0800 I STORAGE  [signalProcessingThread] shutdown: removing fs lock...
+2017-12-20T19:40:01.644+0800 I CONTROL  [signalProcessingThread] now exiting
+2017-12-20T19:40:01.644+0800 I CONTROL  [signalProcessingThread] shutting down with code:0
