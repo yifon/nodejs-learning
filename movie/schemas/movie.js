@@ -40,16 +40,11 @@ MovieSchema.pre('save', function (next) {
 MovieSchema.statics = {
     //取出数据库中所有的数据
     fetch: function (cb) {
-        return this
-            .find({})
-            .sort('meta.updateAt')//按更新时间排序
-            .exec(cb)//执行查询，并将结果传入回调方法
+        return this.find({}).sort('meta.updateAt').exec(cb)//按更新时间排序,执行查询，并将结果传入回调方法
     },
     //查询数据库中单条的数据
     findById: function (id, cb) {
-        return this
-            .findOne({ _id: id })
-            .exec(cb)//执行查询，并将结果传入回调方法
+        return this.findOne({ _id: id }).exec(cb);//执行查询，并将结果传入回调方法
     }
 }
 //将模式导出

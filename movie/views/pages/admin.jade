@@ -3,10 +3,10 @@ extend ../layout
 block content
     .container  
         .row
-            from.form-horizontal(method='post',action='/admin/movie')
+            from.form-horizontal(method='post',action='/admin/movie/new')
                 input(type='hidden',name='movie[_id]',value='#{movie._id}')
                 .form-group 
-                slabel.col-sm-3.control-lable(for='inputTitle')电影名字
+                    label.col-sm-3.control-lable(for='inputTitle')电影名字
                     .col-sm-10
                         input#inputTitle.form-control(type='text',name='movie[title]',value='#{movie.title}')
          
@@ -47,4 +47,4 @@ block content
         
                 .form-group 
                     .col-sm-offset-2.col-sm-10
-                        button.btn.btn-default(type='submit')录入
+                    button.btn.btn-default(type='submit')录入

@@ -25,14 +25,16 @@ var port = process.env.PORT || 3000
 var app = express()//启动一个web服务器，将实例赋予给app变量
 
 //连接本地数据库
-mongoose.connect('mongodb://localhost:12345/imooc')
+mongoose.Promise = global.Promise;
+mongoose.connect('mongodb://localhost:12345/imooc', { useMongoClient: true })
 
 app.set('views', './views/pages')//设置视图的根目录
 app.set('view engine', 'jade')//设置默认的模版引擎
 //返回的对象是一个键值对，当extended为false的时候，键值对中的值就为'String'或'Array'形式，为true的时候，则可为任何数据类型。
-app.use(bodyParser.urlencoded({ extended: false }))//将表单数据进行格式化
+app.use(bodyParser.urlencoded({ extended: true }))//将表单数据进行格式化
+app.use(bodyParser.json())
 //静态资源的获取，dirname为当前目录
-app.use(express.static(path.join(__dirname, 'bower_components')))
+app.use(express.static(path.join(__dirname, 'public')))
 //app.use(serveStatic('bower_components'))
 
 //添加moment模块
@@ -155,13 +157,14 @@ app.post('/admin/movie/new', function (req, res) {
     var id = req.body.movie._id
     var movieObj = req.body.movie //拿到传过来的movie对象
     var _movie
-    if (id !== 'undefined') {
+    console.log("id:" + id);
+    if (typeof(id) !== 'undefined') {
         //证明电影是存储进数据库过的，需要对其进行更新
         Movie.findById(id, function (err, movie) {
             if (err) {
                 console.log(err)
             }
-            //需要将post过来的电影数据替换掉数据中中老的电影数据
+            //需要将post过来的电影数据替换掉数据中老的电影数据
             /**
              * underscore内的extend方法可以实现用另外一个对象内的新的字段来替换掉老的对象里对应的字段
             * 作用是将sources对象中的所有属性拷贝到destination对象中，并返回destination对象。
@@ -179,6 +182,7 @@ app.post('/admin/movie/new', function (req, res) {
     }
     //若电影为新加的，则直接调用模型的构造函数，来传入电影数据
     else {
+        console.log("in");
         _movie = new Movie({
             doctor: movieObj.doctor,
             title: movieObj.title,
@@ -186,7 +190,7 @@ app.post('/admin/movie/new', function (req, res) {
             language: movieObj.language,
             year: movieObj.year,
             poster: movieObj.poster,
-            summary:movieObj.summary,
+            summary: movieObj.summary,
             flash: movieObj.flash
         })
         //再调用save方法
@@ -228,15 +232,15 @@ app.get('/admin/list', function (req, res) {
 
 
 //删除页路由
-app.delete('/admin/list',function(req,res){
-    var id=req.query.id;
-    if(id){
-        Movie.remove({_id:id},function(err,movie){
-            if(err){
+app.delete('/admin/list', function (req, res) {
+    var id = req.query.id;
+    if (id) {
+        Movie.remove({ _id: id }, function (err, movie) {
+            if (err) {
                 console.log(err);
             }
-            else{//如果没有异常，则给客户端返回json数据
-                res.json({success:1})
+            else {//如果没有异常，则给客户端返回json数据
+                res.json({ success: 1 })
             }
         })
     }
