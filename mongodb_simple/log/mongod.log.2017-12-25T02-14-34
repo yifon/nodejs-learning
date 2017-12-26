@@ -1,0 +1,27 @@
+2017-12-20T22:22:09.029+0800 I CONTROL  [initandlisten] MongoDB starting : pid=8153 port=12345 dbpath=/Users/oueikun/Desktop/web_task/imooc/mongodb_simple/data 64-bit host=208.165.136.219.broad.gz.gd.dynamic.163data.com.cn
+2017-12-20T22:22:09.029+0800 I CONTROL  [initandlisten] db version v3.4.10
+2017-12-20T22:22:09.029+0800 I CONTROL  [initandlisten] git version: 078f28920cb24de0dd479b5ea6c66c644f6326e9
+2017-12-20T22:22:09.029+0800 I CONTROL  [initandlisten] OpenSSL version: OpenSSL 1.0.2m  2 Nov 2017
+2017-12-20T22:22:09.029+0800 I CONTROL  [initandlisten] allocator: system
+2017-12-20T22:22:09.029+0800 I CONTROL  [initandlisten] modules: none
+2017-12-20T22:22:09.029+0800 I CONTROL  [initandlisten] build environment:
+2017-12-20T22:22:09.029+0800 I CONTROL  [initandlisten]     distarch: x86_64
+2017-12-20T22:22:09.029+0800 I CONTROL  [initandlisten]     target_arch: x86_64
+2017-12-20T22:22:09.029+0800 I CONTROL  [initandlisten] options: { config: "conf/mongod.conf", net: { port: 12345 }, processManagement: { fork: true }, storage: { dbPath: "data" }, systemLog: { destination: "file", path: "log/mongod.log" } }
+2017-12-20T22:22:09.031+0800 I -        [initandlisten] Detected data files in /Users/oueikun/Desktop/web_task/imooc/mongodb_simple/data created by the 'wiredTiger' storage engine, so setting the active storage engine to 'wiredTiger'.
+2017-12-20T22:22:09.031+0800 I STORAGE  [initandlisten] wiredtiger_open config: create,cache_size=3584M,session_max=20000,eviction=(threads_min=4,threads_max=4),config_base=false,statistics=(fast),log=(enabled=true,archive=true,path=journal,compressor=snappy),file_manager=(close_idle_time=100000),checkpoint=(wait=60,log_size=2GB),statistics_log=(wait=0),
+2017-12-20T22:22:09.766+0800 I CONTROL  [initandlisten] 
+2017-12-20T22:22:09.766+0800 I CONTROL  [initandlisten] ** WARNING: Access control is not enabled for the database.
+2017-12-20T22:22:09.766+0800 I CONTROL  [initandlisten] **          Read and write access to data and configuration is unrestricted.
+2017-12-20T22:22:09.766+0800 I CONTROL  [initandlisten] 
+2017-12-20T22:22:09.801+0800 I FTDC     [initandlisten] Initializing full-time diagnostic data capture with directory '/Users/oueikun/Desktop/web_task/imooc/mongodb_simple/data/diagnostic.data'
+2017-12-20T22:22:09.802+0800 I NETWORK  [thread1] waiting for connections on port 12345
+2017-12-20T22:24:35.355+0800 I NETWORK  [thread1] connection accepted from 127.0.0.1:55327 #1 (1 connection now open)
+2017-12-20T22:24:35.355+0800 I NETWORK  [conn1] received client metadata from 127.0.0.1:55327 conn1: { application: { name: "MongoDB Shell" }, driver: { name: "MongoDB Internal Client", version: "3.4.10" }, os: { type: "Darwin", name: "Mac OS X", architecture: "x86_64", version: "15.6.0" } }
+2017-12-20T22:29:02.664+0800 I NETWORK  [thread1] connection accepted from 127.0.0.1:55469 #2 (2 connections now open)
+2017-12-20T22:29:02.688+0800 I NETWORK  [conn2] received client metadata from 127.0.0.1:55469 conn2: { driver: { name: "nodejs", version: "2.2.33" }, os: { type: "Darwin", name: "darwin", architecture: "x64", version: "15.6.0" }, platform: "Node.js v8.9.1, LE, mongodb-core: 2.1.17" }
+2017-12-20T22:50:51.931+0800 I -        [conn2] end connection 127.0.0.1:55469 (2 connections now open)
+2017-12-20T22:50:53.370+0800 I NETWORK  [thread1] connection accepted from 127.0.0.1:60586 #3 (2 connections now open)
+2017-12-20T22:50:53.394+0800 I NETWORK  [conn3] received client metadata from 127.0.0.1:60586 conn3: { driver: { name: "nodejs", version: "2.2.33" }, os: { type: "Darwin", name: "darwin", architecture: "x64", version: "15.6.0" }, platform: "Node.js v8.9.1, LE, mongodb-core: 2.1.17" }
+2017-12-21T12:50:28.795+0800 I -        [conn3] end connection 127.0.0.1:60586 (2 connections now open)
+2017-12-21T23:18:45.375+0800 I -        [conn1] end connection 127.0.0.1:55327 (1 connection now open)

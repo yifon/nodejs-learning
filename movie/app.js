@@ -11,11 +11,16 @@ var path = require('path')//样式、脚本路径
 var bodyParser = require('body-parser')
 //var serveStatic=require('serve-static')
 
+var cookieParser=require('cookie-parser');
+var cookieSession=require('cookie-session');
+
 //引入mongoose模块，来连接本地数据库
 var mongoose = require('mongoose')
 
 //加载编译的Movie模型
 var Movie = require('./models/movie')
+
+var User = require('./models/user')
 
 //underscore内的extend方法可以实现用另外一个对象内的新的字段来替换掉老的对象里对应的字段
 var _ = require('underscore')
@@ -30,12 +35,18 @@ mongoose.connect('mongodb://localhost:12345/imooc', { useMongoClient: true })
 
 app.set('views', './views/pages')//设置视图的根目录
 app.set('view engine', 'jade')//设置默认的模版引擎
+app.use(bodyParser.json())
 //返回的对象是一个键值对，当extended为false的时候，键值对中的值就为'String'或'Array'形式，为true的时候，则可为任何数据类型。
 app.use(bodyParser.urlencoded({ extended: true }))//将表单数据进行格式化
-app.use(bodyParser.json())
+
 //静态资源的获取，dirname为当前目录
 app.use(express.static(path.join(__dirname, 'public')))
 //app.use(serveStatic('bower_components'))
+
+app.use(cookieParser());
+app.use(cookieSession({
+    secret:'imooc'
+}))
 
 //添加moment模块
 app.locals.moment = require('moment')
@@ -88,6 +99,73 @@ app.get('/', function (req, res) {
 
     })
 })
+
+//signup
+app.post('/user/signup', function (req, res) {
+    var _user = req.body.user;//获取表单里的数据
+    //req.param('user')//param是对body,query,路由的封装
+    //判断用户名是否注册过
+    User.find({ name: _user.name }, function (err, user) {
+        if (err) {
+            console.log(err);
+        }
+        if (user) {
+            return res.redirect('/');
+        } else {
+            var user = new User(_user);
+            user.save(function (err, user) {
+                if (err) {
+                    console.log(err);
+                }
+                res.redirect('/admin/userlist')
+            })
+        }
+    })
+})
+
+//signin
+app.post('/user/signin', function (req, res) {
+    var _user = req.body.user;
+    var name = _user.name;
+    var password = _user.password;
+    User.findOne({ name: name }, function (err, user) {
+        if (err) {
+            console.log(err);
+        }
+        if (!user) {
+            return res.redirect('/');
+        }
+        //比较一下加密的密码
+        user.comparePassword(password, function (err, isMatch) {
+            if (err) {
+                console.log(err);
+            }
+            if (isMatch) {
+                //将状态存储到内存中
+                req.session.user=user
+                console.log('Password is matched!');
+                return res.redirect('/');
+            }else{
+                console.log('Password not match!');
+            }
+        })
+    })
+})
+
+//userlist page
+app.get('/admin/userlist', function (req, res) {
+    //返回用户列表页
+    User.fetch(function (err, users) {
+        if (err) {
+            console.log(err)
+        }
+        res.render('userlist', {
+            title: 'imooc 用户列表页',
+            users: users
+        })
+    })
+})
+
 //detail page
 app.get('/movie/:id', function (req, res) {
     //返回详情页
@@ -141,6 +219,9 @@ app.get('/admin/update/:id', function (req, res) {
     //若id存在，则通过模型Movie来拿到电影
     if (id) {
         Movie.findById(id, function (err, movie) {
+            if (err) {
+                console.log(err);
+            }
             //拿到电影数据后，直接去渲染表单，即后台录制页
             res.render('admin', {
                 title: 'imooc 后台更新页',
@@ -152,13 +233,14 @@ app.get('/admin/update/:id', function (req, res) {
 
 //需要实现从表单提交后的数据存储，需要加入新的路由
 app.post('/admin/movie/new', function (req, res) {
+    console.log(req.body);
     //传过来的数据可能是新添加的，也可能是修改已存在的数据
     //需要拿到传过来的 id
     var id = req.body.movie._id
     var movieObj = req.body.movie //拿到传过来的movie对象
     var _movie
-    console.log("id:" + id);
-    if (typeof(id) !== 'undefined') {
+    console.log(movieObj);
+    if (id !== 'undefined') {
         //证明电影是存储进数据库过的，需要对其进行更新
         Movie.findById(id, function (err, movie) {
             if (err) {
@@ -233,7 +315,9 @@ app.get('/admin/list', function (req, res) {
 
 //删除页路由
 app.delete('/admin/list', function (req, res) {
+    console.log("delete the row")
     var id = req.query.id;
+    console.log("id:" + id);
     if (id) {
         Movie.remove({ _id: id }, function (err, movie) {
             if (err) {
