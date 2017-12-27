@@ -7,7 +7,7 @@ $(function () {
         var tr = $('.item-id-' + id);
         $.ajax({
             type: 'DELETE',//异步请求类型为del
-            url: '/admin/list?id=' + id
+            url: '/admin/movie/list?id=' + id
         })//删除后，服务器返回状态
             .done(function (results) {
                 //删除成功
