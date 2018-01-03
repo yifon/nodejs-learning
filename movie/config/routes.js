@@ -1,9 +1,9 @@
 //分别拿到控制层的入口文件
 var Index = require('../app/controllers/index');//首页
-//加载编译的Movie模型
-var Movie = require('../app/controllers/movie')
-
-var User = require('../app/controllers/user')
+var Movie = require('../app/controllers/movie');//加载编译的Movie模型
+var User = require('../app/controllers/user');
+var Comment = require('../app/controllers/comment');
+var Category = require('../app/controllers/category');
 
 //underscore内的extend方法可以实现用另外一个对象内的新的字段来替换掉老的对象里对应的字段
 var _ = require('underscore')
@@ -39,4 +39,12 @@ module.exports = function (app) {
     app.get('/admin/movie', User.signinRequired, User.adminRequired, Movie.save);
     app.get('/admin/movie/list', Movie.movielist);
     app.delete('/admin/movie/list', User.signinRequired, User.adminRequired, Movie.del);
+
+    //Comment
+    app.post('/user/comment', User.signinRequired, Comment.save);
+
+    //Category
+    app.get('/admin/category/new', User.signinRequired, User.adminRequired, Category.new);
+    app.post('/admin/category', User.signinRequired, User.adminRequired, Category.save);
+    app.get('/admin/category/list', User.signinRequired, User.adminRequired, Category.list);
 }

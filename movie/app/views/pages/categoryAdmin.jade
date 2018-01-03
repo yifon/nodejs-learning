@@ -1,0 +1,13 @@
+//-录入页是一个表单，需要用到很多字段
+extend ../layout
+block content
+    .container  
+        .row
+            form.form-horizontal(method='post',action='/admin/category')
+                .form-group 
+                    label.col-sm-3.control-lable(for='inputCategory') 电影分类
+                    .col-sm-10
+                        input#inputCategory.form-control(type='text',name='category[name]',value=category.name)
+                .form-group 
+                    .col-sm-offset-2.col-sm-10
+                    button.btn.btn-default(type='submit') 录入

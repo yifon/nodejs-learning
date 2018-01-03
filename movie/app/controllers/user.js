@@ -19,7 +19,7 @@ exports.signup = function (req, res) {
     var _user = req.body.user;//获取表单里的数据
     //req.param('user')//param是对body,query,路由的封装
     //判断用户名是否注册过
-    User.find({ name: _user.name }, function (err, user) {
+    User.findOne({ name: _user.name }, function (err, user) {
         if (err) {
             console.log(err);
         }
@@ -91,6 +91,7 @@ exports.list = function (req, res) {
 exports.signinRequired = function (req, res, next) {
     var user = req.session.user;
     if (!user) {
+        console.log("here 1");
         return res.redirect('/signin');
     }
     next();
@@ -98,6 +99,8 @@ exports.signinRequired = function (req, res, next) {
 //midware for user,管理员中间件
 exports.adminRequired = function (req, res, next) {
     var user = req.session.user;
+    console.log("user.name:"+user.name);
+    console.log("user.role:"+user.role);
     if (user.role <= 10) {
         return res.redirect('/signin');
     }

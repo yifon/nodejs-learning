@@ -1,20 +1,11 @@
 //传入mongoose的建模工具模块
 var mongoose = require('mongoose')
-
 var Schema = mongoose.Schema;
-var ObjectId = Schema.Types.ObjectId;
-
-var CommentSchema = new mongoose.Schema({
-    //评论内容，哪一部电影，回复谁
-    movie: { type: ObjectId, ref: 'Movie' },
-    from: { type: ObjectId, ref: 'User' },
-    //主评论下n个小评论，数组
-    reply: [{
-        from: { type: ObjectId, ref: 'User' },//谁回复
-        to: { type: ObjectId, ref: 'User' },//回复给谁
-        content: String//具体回复的内容
-    }],
-    content: String,
+var ObjectId = Schema.Types.ObjectId;//来声明一个对象ID类型,MongoDB内置的_id 的类型
+//传入跟分类有关的字段和类型
+var CategorySchema = new mongoose.Schema({
+    name: String,//分类名字，拿到分类名字即可拿到所有的电影
+    movies: [{ type: ObjectId, ref: 'Movie' }],//数组，保存电影的ObjectId
     //meta存放的是录入或者更新数据时的时间记录
     meta: {
         //创建时间
@@ -30,7 +21,7 @@ var CommentSchema = new mongoose.Schema({
     }
 })
 //为模式创建方法，pre-save表示每次存储前都会调用此方法
-CommentSchema.pre('save', function (next) {
+CategorySchema.pre('save', function (next) {
     //判断数据是否为新添加的，如果是，则将创建时间设置为当前时间
     if (this.isNew) {
         this.meta.createAt = this.meta.updateAt = Date.now()
@@ -42,7 +33,7 @@ CommentSchema.pre('save', function (next) {
     next()//将存储流程走下去
 })
 //静态方法不会直接与数据库交互，只有经过模型编译和实例化后，才会具有此方法
-CommentSchema.statics = {
+CategorySchema.statics = {
     //取出数据库中所有的数据
     fetch: function (cb) {
         return this.find({}).sort('meta.updateAt').exec(cb)//按更新时间排序,执行查询，并将结果传入回调方法
@@ -53,4 +44,4 @@ CommentSchema.statics = {
     }
 }
 //将模式导出
-module.exports = CommentSchema
+module.exports = CategorySchema

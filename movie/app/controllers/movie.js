@@ -1,6 +1,8 @@
 
 //加载编译的Movie模型
 var Movie = require('../models/movie')
+
+var Comment = require('../models/comment')
 //underscore内的extend方法可以实现用另外一个对象内的新的字段来替换掉老的对象里对应的字段
 var _ = require('underscore')
 //detail page
@@ -9,24 +11,30 @@ exports.detail = function (req, res) {
     var id = req.params.id //id为查询的id
     //传入id,在回调方法里拿到查询到的电影数据
     Movie.findById(id, function (err, movie) {
-    res.render('detail', {
-        title: 'imooc 详情页',
-            //传入movie的对象
-            movie: movie
-        })
+        //从comment里查comment 里跟详情页里相同的id，再拿到对应id下的comment
+        Comment.find({ movie: id })
+            .populate('from', 'name')//查询关联的user数据
+            .populate('reply.from reply.to','name')//回复的数据
+            .exec(function (err, comments) {
+                console.log(comments);
+                res.render('detail', {
+                    title: 'imooc 详情页',
+                    //传入movie的对象
+                    movie: movie,
+                    comments: comments
+                })
+            })
     })
 
 }
 
 //需要实现从表单提交后的数据存储，需要加入新的路由
 exports.new = function (req, res) {
-    console.log(req.body);
     //传过来的数据可能是新添加的，也可能是修改已存在的数据
     //需要拿到传过来的 id
     var id = req.body.movie._id
     var movieObj = req.body.movie //拿到传过来的movie对象
     var _movie
-    console.log(movieObj);
     if (id !== 'undefined') {
         //证明电影是存储进数据库过的，需要对其进行更新
         Movie.findById(id, function (err, movie) {
@@ -51,7 +59,6 @@ exports.new = function (req, res) {
     }
     //若电影为新加的，则直接调用模型的构造函数，来传入电影数据
     else {
-        console.log("in");
         _movie = new Movie({
             doctor: movieObj.doctor,
             title: movieObj.title,
@@ -132,7 +139,6 @@ exports.movielist = function (req, res) {
 exports.del = function (req, res) {
     console.log("delete the row")
     var id = req.query.id;
-    console.log("id:" + id);
     if (id) {
         Movie.remove({ _id: id }, function (err, movie) {
             if (err) {

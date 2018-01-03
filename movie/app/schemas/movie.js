@@ -1,7 +1,13 @@
 //传入mongoose的建模工具模块
-var mongoose = require('mongoose')
+var mongoose = require('mongoose');
+var Schema = mongoose.Schema;
+var ObjectId = Schema.Types.ObjectId;
 //传入跟电影有关的字段和类型
-var MovieSchema = new mongoose.Schema({
+var MovieSchema = new Schema({
+    category: {
+        type: ObjectId,
+        ref: 'Category'
+    },
     doctor: String,
     title: String,
     language: String,
