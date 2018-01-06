@@ -14,6 +14,7 @@ var bodyParser = require('body-parser')
 var cookieParser = require('cookie-parser');
 //var cookieSession = require('cookie-session');//这种方式在下面的mongodb会话持久化中引入有问题
 var expressSession = require('express-session');
+var multipart=require('connect-multiparty');
 
 //利用mongodb做会话的持久化
 //var mongoStore = require('connect-mongo')(express);//此方式已经不支持
@@ -43,6 +44,7 @@ app.use(bodyParser.urlencoded({ extended: true }))//将表单数据进行格式�
 
 
 app.use(cookieParser());
+app.use(multipart());
 app.use(expressSession({
     secret: 'imooc',
     resave: false,

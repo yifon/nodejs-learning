@@ -4,11 +4,7 @@ var Schema = mongoose.Schema;
 var ObjectId = Schema.Types.ObjectId;
 //传入跟电影有关的字段和类型
 var MovieSchema = new Schema({
-    category: {
-        type: ObjectId,
-        ref: 'Category'
-    },
-    doctor: String,
+    director: String,
     title: String,
     language: String,
     country: String,
@@ -16,6 +12,10 @@ var MovieSchema = new Schema({
     flash: String,
     poster: String,
     year: Number,
+    category: {
+        type: ObjectId,
+        ref: 'Category'
+    },
     //meta存放的是录入或者更新数据时的时间记录
     meta: {
         //创建时间

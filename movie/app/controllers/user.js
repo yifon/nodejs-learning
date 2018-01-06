@@ -99,8 +99,6 @@ exports.signinRequired = function (req, res, next) {
 //midware for user,管理员中间件
 exports.adminRequired = function (req, res, next) {
     var user = req.session.user;
-    console.log("user.name:"+user.name);
-    console.log("user.role:"+user.role);
     if (user.role <= 10) {
         return res.redirect('/signin');
     }
