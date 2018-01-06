@@ -44,10 +44,12 @@ module.exports = function (grunt) {
     }
     )
 
-    grunt.loadNpmTasks("grunt-contrib-watch")//只要有文件删改，则会重新执行加载的任务
-    grunt.loadNpmTasks("grunt-nodemon")//实时监听入口文件app.js,若其改动，则会自动重启app.js
-    grunt.loadNpmTasks("grunt-concurrent")//针对慢任务开发的插件
+    grunt.loadNpmTasks("grunt-contrib-watch");//只要有文件删改，则会重新执行加载的任务
+    grunt.loadNpmTasks("grunt-nodemon");//实时监听入口文件app.js,若其改动，则会自动重启app.js
+    grunt.loadNpmTasks("grunt-concurrent");//针对慢任务开发的插件
+    grunt.loadNpmTasks("grunt-mocha-test");
 
-    grunt.option('force', true)//不要因为语法的错误和警告而中断了整个grunt的服务
-    grunt.registerTask('default', ['concurrent'])//注册default任务
+    grunt.option('force', true);//不要因为语法的错误和警告而中断了整个grunt的服务
+    grunt.registerTask('default', ['concurrent']);//注册default任务
+    grunt.registerTask('test', ['mochaTest']);
 }

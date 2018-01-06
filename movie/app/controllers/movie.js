@@ -11,8 +11,15 @@ var path = require('path');
 exports.detail = function (req, res) {
     //返回详情页
     var id = req.params.id //id为查询的id
+    //每次pv增加1
+    Movie.update({ _id: id }, { $inc: { pv: 1 } }, function (err) {
+        if (err) {
+            console.log(err);
+        }
+    })
     //传入id,在回调方法里拿到查询到的电影数据
     Movie.findById(id, function (err, movie) {
+
         //从comment里查comment 里跟详情页里相同的id，再拿到对应id下的comment
         Comment.find({ movie: id })
             .populate('from', 'name')//查询关联的user数据
@@ -72,7 +79,7 @@ exports.savePoster = function (req, res, next) {
     if (originalFilename) {
         fs.readFile(filePath, function (err, data) {
             var timestamp = Date.now();
-            var type = posterData.type.split('/')[1];
+            var type = posterData.type.split('/')[1];//jpeg,png..
             var poster = timestamp + '.' + type;
             var newPath = path.join(__dirname, '../../', '/public/upload/' + poster)//生成服务器的存储地址
             fs.writeFile(newPath, data, function (err) {

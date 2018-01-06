@@ -1,0 +1,501 @@
+2018-01-04T11:36:31.122+0800 I CONTROL  [initandlisten] MongoDB starting : pid=982 port=12345 dbpath=/Users/oueikun/Desktop/web_task/imooc/mongodb_simple/data 64-bit host=28.161.136.219.broad.gz.gd.dynamic.163data.com.cn
+2018-01-04T11:36:31.122+0800 I CONTROL  [initandlisten] db version v3.4.10
+2018-01-04T11:36:31.122+0800 I CONTROL  [initandlisten] git version: 078f28920cb24de0dd479b5ea6c66c644f6326e9
+2018-01-04T11:36:31.122+0800 I CONTROL  [initandlisten] OpenSSL version: OpenSSL 1.0.2m  2 Nov 2017
+2018-01-04T11:36:31.122+0800 I CONTROL  [initandlisten] allocator: system
+2018-01-04T11:36:31.122+0800 I CONTROL  [initandlisten] modules: none
+2018-01-04T11:36:31.122+0800 I CONTROL  [initandlisten] build environment:
+2018-01-04T11:36:31.122+0800 I CONTROL  [initandlisten]     distarch: x86_64
+2018-01-04T11:36:31.122+0800 I CONTROL  [initandlisten]     target_arch: x86_64
+2018-01-04T11:36:31.122+0800 I CONTROL  [initandlisten] options: { config: "./conf/mongod.conf", net: { port: 12345 }, processManagement: { fork: true }, storage: { dbPath: "data" }, systemLog: { destination: "file", path: "log/mongod.log" } }
+2018-01-04T11:36:31.122+0800 W -        [initandlisten] Detected unclean shutdown - /Users/oueikun/Desktop/web_task/imooc/mongodb_simple/data/mongod.lock is not empty.
+2018-01-04T11:36:31.123+0800 I -        [initandlisten] Detected data files in /Users/oueikun/Desktop/web_task/imooc/mongodb_simple/data created by the 'wiredTiger' storage engine, so setting the active storage engine to 'wiredTiger'.
+2018-01-04T11:36:31.123+0800 W STORAGE  [initandlisten] Recovering data from the last clean checkpoint.
+2018-01-04T11:36:31.123+0800 I STORAGE  [initandlisten] wiredtiger_open config: create,cache_size=3584M,session_max=20000,eviction=(threads_min=4,threads_max=4),config_base=false,statistics=(fast),log=(enabled=true,archive=true,path=journal,compressor=snappy),file_manager=(close_idle_time=100000),checkpoint=(wait=60,log_size=2GB),statistics_log=(wait=0),
+2018-01-04T11:36:31.881+0800 I CONTROL  [initandlisten] 
+2018-01-04T11:36:31.881+0800 I CONTROL  [initandlisten] ** WARNING: Access control is not enabled for the database.
+2018-01-04T11:36:31.881+0800 I CONTROL  [initandlisten] **          Read and write access to data and configuration is unrestricted.
+2018-01-04T11:36:31.881+0800 I CONTROL  [initandlisten] 
+2018-01-04T11:36:31.992+0800 I FTDC     [initandlisten] Initializing full-time diagnostic data capture with directory '/Users/oueikun/Desktop/web_task/imooc/mongodb_simple/data/diagnostic.data'
+2018-01-04T11:36:31.993+0800 I NETWORK  [thread1] waiting for connections on port 12345
+2018-01-04T11:36:32.016+0800 I FTDC     [ftdc] Unclean full-time diagnostic data capture shutdown detected, found interim file, some metrics may have been lost. OK
+2018-01-04T11:36:46.805+0800 I NETWORK  [thread1] connection accepted from 127.0.0.1:49617 #1 (1 connection now open)
+2018-01-04T11:36:46.806+0800 I NETWORK  [conn1] received client metadata from 127.0.0.1:49617 conn1: { application: { name: "MongoDB Shell" }, driver: { name: "MongoDB Internal Client", version: "3.4.10" }, os: { type: "Darwin", name: "Mac OS X", architecture: "x86_64", version: "15.6.0" } }
+2018-01-04T11:40:52.657+0800 I NETWORK  [thread1] connection accepted from 127.0.0.1:49650 #2 (2 connections now open)
+2018-01-04T11:40:52.658+0800 I NETWORK  [thread1] connection accepted from 127.0.0.1:49651 #3 (3 connections now open)
+2018-01-04T11:40:52.674+0800 I NETWORK  [conn2] received client metadata from 127.0.0.1:49650 conn2: { driver: { name: "nodejs", version: "2.2.33" }, os: { type: "Darwin", name: "darwin", architecture: "x64", version: "15.6.0" }, platform: "Node.js v8.9.1, LE, mongodb-core: 2.1.17" }
+2018-01-04T11:40:52.680+0800 I NETWORK  [conn3] received client metadata from 127.0.0.1:49651 conn3: { driver: { name: "nodejs", version: "2.2.33" }, os: { type: "Darwin", name: "darwin", architecture: "x64", version: "15.6.0" }, platform: "Node.js v8.9.1, LE, mongodb-core: 2.1.17" }
+2018-01-04T11:41:33.242+0800 I NETWORK  [thread1] connection accepted from 127.0.0.1:49663 #4 (4 connections now open)
+2018-01-04T11:41:33.652+0800 I NETWORK  [thread1] connection accepted from 127.0.0.1:49664 #5 (5 connections now open)
+2018-01-04T11:42:20.201+0800 I -        [conn2] end connection 127.0.0.1:49650 (5 connections now open)
+2018-01-04T11:42:20.201+0800 I -        [conn4] end connection 127.0.0.1:49663 (5 connections now open)
+2018-01-04T11:42:20.201+0800 I -        [conn3] end connection 127.0.0.1:49651 (5 connections now open)
+2018-01-04T11:42:20.201+0800 I -        [conn5] end connection 127.0.0.1:49664 (5 connections now open)
+2018-01-04T11:42:20.821+0800 I NETWORK  [thread1] connection accepted from 127.0.0.1:49673 #6 (2 connections now open)
+2018-01-04T11:42:20.821+0800 I NETWORK  [thread1] connection accepted from 127.0.0.1:49674 #7 (3 connections now open)
+2018-01-04T11:42:20.838+0800 I NETWORK  [conn6] received client metadata from 127.0.0.1:49673 conn6: { driver: { name: "nodejs", version: "2.2.33" }, os: { type: "Darwin", name: "darwin", architecture: "x64", version: "15.6.0" }, platform: "Node.js v8.9.1, LE, mongodb-core: 2.1.17" }
+2018-01-04T11:42:20.842+0800 I NETWORK  [conn7] received client metadata from 127.0.0.1:49674 conn7: { driver: { name: "nodejs", version: "2.2.33" }, os: { type: "Darwin", name: "darwin", architecture: "x64", version: "15.6.0" }, platform: "Node.js v8.9.1, LE, mongodb-core: 2.1.17" }
+2018-01-04T11:47:43.770+0800 I NETWORK  [thread1] connection accepted from 127.0.0.1:49831 #8 (4 connections now open)
+2018-01-04T11:47:43.775+0800 I NETWORK  [thread1] connection accepted from 127.0.0.1:49832 #9 (5 connections now open)
+2018-01-04T11:52:14.132+0800 I -        [conn9] end connection 127.0.0.1:49832 (5 connections now open)
+2018-01-04T11:52:14.132+0800 I -        [conn8] end connection 127.0.0.1:49831 (5 connections now open)
+2018-01-04T11:52:14.132+0800 I -        [conn7] end connection 127.0.0.1:49674 (4 connections now open)
+2018-01-04T11:52:14.132+0800 I -        [conn6] end connection 127.0.0.1:49673 (4 connections now open)
+2018-01-04T11:52:14.764+0800 I NETWORK  [thread1] connection accepted from 127.0.0.1:50949 #10 (2 connections now open)
+2018-01-04T11:52:14.764+0800 I NETWORK  [thread1] connection accepted from 127.0.0.1:50950 #11 (3 connections now open)
+2018-01-04T11:52:14.778+0800 I NETWORK  [conn10] received client metadata from 127.0.0.1:50949 conn10: { driver: { name: "nodejs", version: "2.2.33" }, os: { type: "Darwin", name: "darwin", architecture: "x64", version: "15.6.0" }, platform: "Node.js v8.9.1, LE, mongodb-core: 2.1.17" }
+2018-01-04T11:52:14.783+0800 I NETWORK  [conn11] received client metadata from 127.0.0.1:50950 conn11: { driver: { name: "nodejs", version: "2.2.33" }, os: { type: "Darwin", name: "darwin", architecture: "x64", version: "15.6.0" }, platform: "Node.js v8.9.1, LE, mongodb-core: 2.1.17" }
+2018-01-04T11:52:52.551+0800 I -        [conn11] end connection 127.0.0.1:50950 (3 connections now open)
+2018-01-04T11:52:52.551+0800 I -        [conn10] end connection 127.0.0.1:50949 (3 connections now open)
+2018-01-04T11:52:53.370+0800 I NETWORK  [thread1] connection accepted from 127.0.0.1:51077 #12 (2 connections now open)
+2018-01-04T11:52:53.370+0800 I NETWORK  [thread1] connection accepted from 127.0.0.1:51078 #13 (3 connections now open)
+2018-01-04T11:52:53.382+0800 I NETWORK  [conn12] received client metadata from 127.0.0.1:51077 conn12: { driver: { name: "nodejs", version: "2.2.33" }, os: { type: "Darwin", name: "darwin", architecture: "x64", version: "15.6.0" }, platform: "Node.js v8.9.1, LE, mongodb-core: 2.1.17" }
+2018-01-04T11:52:53.389+0800 I NETWORK  [conn13] received client metadata from 127.0.0.1:51078 conn13: { driver: { name: "nodejs", version: "2.2.33" }, os: { type: "Darwin", name: "darwin", architecture: "x64", version: "15.6.0" }, platform: "Node.js v8.9.1, LE, mongodb-core: 2.1.17" }
+2018-01-04T11:54:31.305+0800 I -        [conn12] end connection 127.0.0.1:51077 (3 connections now open)
+2018-01-04T11:54:31.305+0800 I -        [conn13] end connection 127.0.0.1:51078 (3 connections now open)
+2018-01-04T11:54:31.991+0800 I NETWORK  [thread1] connection accepted from 127.0.0.1:51229 #14 (2 connections now open)
+2018-01-04T11:54:31.992+0800 I NETWORK  [thread1] connection accepted from 127.0.0.1:51230 #15 (3 connections now open)
+2018-01-04T11:54:32.010+0800 I NETWORK  [conn14] received client metadata from 127.0.0.1:51229 conn14: { driver: { name: "nodejs", version: "2.2.33" }, os: { type: "Darwin", name: "darwin", architecture: "x64", version: "15.6.0" }, platform: "Node.js v8.9.1, LE, mongodb-core: 2.1.17" }
+2018-01-04T11:54:32.020+0800 I NETWORK  [conn15] received client metadata from 127.0.0.1:51230 conn15: { driver: { name: "nodejs", version: "2.2.33" }, os: { type: "Darwin", name: "darwin", architecture: "x64", version: "15.6.0" }, platform: "Node.js v8.9.1, LE, mongodb-core: 2.1.17" }
+2018-01-04T11:57:42.049+0800 I -        [conn15] end connection 127.0.0.1:51230 (3 connections now open)
+2018-01-04T11:57:42.049+0800 I -        [conn14] end connection 127.0.0.1:51229 (3 connections now open)
+2018-01-04T11:57:42.659+0800 I NETWORK  [thread1] connection accepted from 127.0.0.1:51868 #16 (2 connections now open)
+2018-01-04T11:57:42.659+0800 I NETWORK  [thread1] connection accepted from 127.0.0.1:51869 #17 (3 connections now open)
+2018-01-04T11:57:42.676+0800 I NETWORK  [conn16] received client metadata from 127.0.0.1:51868 conn16: { driver: { name: "nodejs", version: "2.2.33" }, os: { type: "Darwin", name: "darwin", architecture: "x64", version: "15.6.0" }, platform: "Node.js v8.9.1, LE, mongodb-core: 2.1.17" }
+2018-01-04T11:57:42.683+0800 I NETWORK  [conn17] received client metadata from 127.0.0.1:51869 conn17: { driver: { name: "nodejs", version: "2.2.33" }, os: { type: "Darwin", name: "darwin", architecture: "x64", version: "15.6.0" }, platform: "Node.js v8.9.1, LE, mongodb-core: 2.1.17" }
+2018-01-04T16:25:14.386+0800 I -        [conn17] end connection 127.0.0.1:51869 (3 connections now open)
+2018-01-04T16:25:14.386+0800 I -        [conn16] end connection 127.0.0.1:51868 (3 connections now open)
+2018-01-04T16:25:15.070+0800 I NETWORK  [thread1] connection accepted from 127.0.0.1:61218 #18 (2 connections now open)
+2018-01-04T16:25:15.070+0800 I NETWORK  [thread1] connection accepted from 127.0.0.1:61219 #19 (3 connections now open)
+2018-01-04T16:25:15.084+0800 I NETWORK  [conn18] received client metadata from 127.0.0.1:61218 conn18: { driver: { name: "nodejs", version: "2.2.33" }, os: { type: "Darwin", name: "darwin", architecture: "x64", version: "15.6.0" }, platform: "Node.js v8.9.1, LE, mongodb-core: 2.1.17" }
+2018-01-04T16:25:15.089+0800 I NETWORK  [conn19] received client metadata from 127.0.0.1:61219 conn19: { driver: { name: "nodejs", version: "2.2.33" }, os: { type: "Darwin", name: "darwin", architecture: "x64", version: "15.6.0" }, platform: "Node.js v8.9.1, LE, mongodb-core: 2.1.17" }
+2018-01-04T16:25:23.799+0800 I -        [conn18] end connection 127.0.0.1:61218 (3 connections now open)
+2018-01-04T16:25:23.799+0800 I -        [conn19] end connection 127.0.0.1:61219 (3 connections now open)
+2018-01-04T16:25:24.392+0800 I NETWORK  [thread1] connection accepted from 127.0.0.1:61258 #20 (2 connections now open)
+2018-01-04T16:25:24.392+0800 I NETWORK  [thread1] connection accepted from 127.0.0.1:61259 #21 (3 connections now open)
+2018-01-04T16:25:24.407+0800 I NETWORK  [conn20] received client metadata from 127.0.0.1:61258 conn20: { driver: { name: "nodejs", version: "2.2.33" }, os: { type: "Darwin", name: "darwin", architecture: "x64", version: "15.6.0" }, platform: "Node.js v8.9.1, LE, mongodb-core: 2.1.17" }
+2018-01-04T16:25:24.411+0800 I NETWORK  [conn21] received client metadata from 127.0.0.1:61259 conn21: { driver: { name: "nodejs", version: "2.2.33" }, os: { type: "Darwin", name: "darwin", architecture: "x64", version: "15.6.0" }, platform: "Node.js v8.9.1, LE, mongodb-core: 2.1.17" }
+2018-01-04T16:25:53.093+0800 I NETWORK  [thread1] connection accepted from 127.0.0.1:61381 #22 (4 connections now open)
+2018-01-04T16:26:18.764+0800 I NETWORK  [thread1] connection accepted from 127.0.0.1:61496 #23 (5 connections now open)
+2018-01-04T16:26:48.740+0800 I -        [conn23] end connection 127.0.0.1:61496 (5 connections now open)
+2018-01-04T16:26:48.740+0800 I -        [conn22] end connection 127.0.0.1:61381 (5 connections now open)
+2018-01-04T16:26:48.741+0800 I -        [conn21] end connection 127.0.0.1:61259 (3 connections now open)
+2018-01-04T16:26:48.741+0800 I -        [conn20] end connection 127.0.0.1:61258 (3 connections now open)
+2018-01-04T16:26:49.355+0800 I NETWORK  [thread1] connection accepted from 127.0.0.1:61621 #24 (2 connections now open)
+2018-01-04T16:26:49.356+0800 I NETWORK  [thread1] connection accepted from 127.0.0.1:61622 #25 (3 connections now open)
+2018-01-04T16:26:49.371+0800 I NETWORK  [conn24] received client metadata from 127.0.0.1:61621 conn24: { driver: { name: "nodejs", version: "2.2.33" }, os: { type: "Darwin", name: "darwin", architecture: "x64", version: "15.6.0" }, platform: "Node.js v8.9.1, LE, mongodb-core: 2.1.17" }
+2018-01-04T16:26:49.375+0800 I NETWORK  [conn25] received client metadata from 127.0.0.1:61622 conn25: { driver: { name: "nodejs", version: "2.2.33" }, os: { type: "Darwin", name: "darwin", architecture: "x64", version: "15.6.0" }, platform: "Node.js v8.9.1, LE, mongodb-core: 2.1.17" }
+2018-01-04T16:27:44.406+0800 I -        [conn25] end connection 127.0.0.1:61622 (3 connections now open)
+2018-01-04T16:27:44.406+0800 I -        [conn24] end connection 127.0.0.1:61621 (3 connections now open)
+2018-01-04T16:27:47.396+0800 I NETWORK  [thread1] connection accepted from 127.0.0.1:61861 #26 (2 connections now open)
+2018-01-04T16:27:47.396+0800 I NETWORK  [thread1] connection accepted from 127.0.0.1:61862 #27 (3 connections now open)
+2018-01-04T16:27:47.414+0800 I NETWORK  [conn26] received client metadata from 127.0.0.1:61861 conn26: { driver: { name: "nodejs", version: "2.2.33" }, os: { type: "Darwin", name: "darwin", architecture: "x64", version: "15.6.0" }, platform: "Node.js v8.9.1, LE, mongodb-core: 2.1.17" }
+2018-01-04T16:27:47.417+0800 I NETWORK  [conn27] received client metadata from 127.0.0.1:61862 conn27: { driver: { name: "nodejs", version: "2.2.33" }, os: { type: "Darwin", name: "darwin", architecture: "x64", version: "15.6.0" }, platform: "Node.js v8.9.1, LE, mongodb-core: 2.1.17" }
+2018-01-04T16:30:09.143+0800 I -        [conn27] end connection 127.0.0.1:61862 (3 connections now open)
+2018-01-04T16:30:09.144+0800 I -        [conn26] end connection 127.0.0.1:61861 (2 connections now open)
+2018-01-04T16:30:13.314+0800 I NETWORK  [thread1] connection accepted from 127.0.0.1:62318 #28 (2 connections now open)
+2018-01-04T16:30:13.314+0800 I NETWORK  [thread1] connection accepted from 127.0.0.1:62319 #29 (3 connections now open)
+2018-01-04T16:30:13.330+0800 I NETWORK  [conn28] received client metadata from 127.0.0.1:62318 conn28: { driver: { name: "nodejs", version: "2.2.33" }, os: { type: "Darwin", name: "darwin", architecture: "x64", version: "15.6.0" }, platform: "Node.js v8.9.1, LE, mongodb-core: 2.1.17" }
+2018-01-04T16:30:13.335+0800 I NETWORK  [conn29] received client metadata from 127.0.0.1:62319 conn29: { driver: { name: "nodejs", version: "2.2.33" }, os: { type: "Darwin", name: "darwin", architecture: "x64", version: "15.6.0" }, platform: "Node.js v8.9.1, LE, mongodb-core: 2.1.17" }
+2018-01-04T16:35:08.544+0800 I -        [conn28] end connection 127.0.0.1:62318 (3 connections now open)
+2018-01-04T16:35:08.544+0800 I -        [conn29] end connection 127.0.0.1:62319 (3 connections now open)
+2018-01-04T16:35:09.142+0800 I NETWORK  [thread1] connection accepted from 127.0.0.1:63456 #30 (2 connections now open)
+2018-01-04T16:35:09.142+0800 I NETWORK  [thread1] connection accepted from 127.0.0.1:63457 #31 (3 connections now open)
+2018-01-04T16:35:09.159+0800 I NETWORK  [conn30] received client metadata from 127.0.0.1:63456 conn30: { driver: { name: "nodejs", version: "2.2.33" }, os: { type: "Darwin", name: "darwin", architecture: "x64", version: "15.6.0" }, platform: "Node.js v8.9.1, LE, mongodb-core: 2.1.17" }
+2018-01-04T16:35:09.164+0800 I NETWORK  [conn31] received client metadata from 127.0.0.1:63457 conn31: { driver: { name: "nodejs", version: "2.2.33" }, os: { type: "Darwin", name: "darwin", architecture: "x64", version: "15.6.0" }, platform: "Node.js v8.9.1, LE, mongodb-core: 2.1.17" }
+2018-01-04T16:35:31.950+0800 I -        [conn31] end connection 127.0.0.1:63457 (3 connections now open)
+2018-01-04T16:35:31.950+0800 I -        [conn30] end connection 127.0.0.1:63456 (3 connections now open)
+2018-01-04T16:35:33.062+0800 I NETWORK  [thread1] connection accepted from 127.0.0.1:63558 #32 (2 connections now open)
+2018-01-04T16:35:33.062+0800 I NETWORK  [thread1] connection accepted from 127.0.0.1:63559 #33 (3 connections now open)
+2018-01-04T16:35:33.080+0800 I NETWORK  [conn32] received client metadata from 127.0.0.1:63558 conn32: { driver: { name: "nodejs", version: "2.2.33" }, os: { type: "Darwin", name: "darwin", architecture: "x64", version: "15.6.0" }, platform: "Node.js v8.9.1, LE, mongodb-core: 2.1.17" }
+2018-01-04T16:35:33.084+0800 I NETWORK  [conn33] received client metadata from 127.0.0.1:63559 conn33: { driver: { name: "nodejs", version: "2.2.33" }, os: { type: "Darwin", name: "darwin", architecture: "x64", version: "15.6.0" }, platform: "Node.js v8.9.1, LE, mongodb-core: 2.1.17" }
+2018-01-04T16:36:45.476+0800 I NETWORK  [thread1] connection accepted from 127.0.0.1:63807 #34 (4 connections now open)
+2018-01-04T16:36:45.479+0800 I NETWORK  [thread1] connection accepted from 127.0.0.1:63808 #35 (5 connections now open)
+2018-01-04T16:37:05.525+0800 I -        [conn35] end connection 127.0.0.1:63808 (5 connections now open)
+2018-01-04T16:37:05.525+0800 I -        [conn33] end connection 127.0.0.1:63559 (5 connections now open)
+2018-01-04T16:37:05.525+0800 I -        [conn34] end connection 127.0.0.1:63807 (5 connections now open)
+2018-01-04T16:37:05.526+0800 I -        [conn32] end connection 127.0.0.1:63558 (5 connections now open)
+2018-01-04T16:37:06.286+0800 I NETWORK  [thread1] connection accepted from 127.0.0.1:63896 #36 (2 connections now open)
+2018-01-04T16:37:06.287+0800 I NETWORK  [thread1] connection accepted from 127.0.0.1:63897 #37 (3 connections now open)
+2018-01-04T16:37:06.300+0800 I NETWORK  [conn36] received client metadata from 127.0.0.1:63896 conn36: { driver: { name: "nodejs", version: "2.2.33" }, os: { type: "Darwin", name: "darwin", architecture: "x64", version: "15.6.0" }, platform: "Node.js v8.9.1, LE, mongodb-core: 2.1.17" }
+2018-01-04T16:37:06.307+0800 I NETWORK  [conn37] received client metadata from 127.0.0.1:63897 conn37: { driver: { name: "nodejs", version: "2.2.33" }, os: { type: "Darwin", name: "darwin", architecture: "x64", version: "15.6.0" }, platform: "Node.js v8.9.1, LE, mongodb-core: 2.1.17" }
+2018-01-04T16:37:12.757+0800 I NETWORK  [thread1] connection accepted from 127.0.0.1:63927 #38 (4 connections now open)
+2018-01-04T16:37:12.764+0800 I NETWORK  [thread1] connection accepted from 127.0.0.1:63928 #39 (5 connections now open)
+2018-01-04T16:56:13.007+0800 I -        [conn39] end connection 127.0.0.1:63928 (5 connections now open)
+2018-01-04T16:56:13.007+0800 I -        [conn38] end connection 127.0.0.1:63927 (5 connections now open)
+2018-01-04T16:56:13.008+0800 I -        [conn37] end connection 127.0.0.1:63897 (3 connections now open)
+2018-01-04T16:56:13.008+0800 I -        [conn36] end connection 127.0.0.1:63896 (2 connections now open)
+2018-01-04T16:56:13.768+0800 I NETWORK  [thread1] connection accepted from 127.0.0.1:52877 #40 (2 connections now open)
+2018-01-04T16:56:13.769+0800 I NETWORK  [thread1] connection accepted from 127.0.0.1:52878 #41 (3 connections now open)
+2018-01-04T16:56:13.780+0800 I NETWORK  [conn40] received client metadata from 127.0.0.1:52877 conn40: { driver: { name: "nodejs", version: "2.2.33" }, os: { type: "Darwin", name: "darwin", architecture: "x64", version: "15.6.0" }, platform: "Node.js v8.9.1, LE, mongodb-core: 2.1.17" }
+2018-01-04T16:56:13.787+0800 I NETWORK  [conn41] received client metadata from 127.0.0.1:52878 conn41: { driver: { name: "nodejs", version: "2.2.33" }, os: { type: "Darwin", name: "darwin", architecture: "x64", version: "15.6.0" }, platform: "Node.js v8.9.1, LE, mongodb-core: 2.1.17" }
+2018-01-04T16:58:14.501+0800 I NETWORK  [thread1] connection accepted from 127.0.0.1:53358 #42 (4 connections now open)
+2018-01-04T16:58:14.504+0800 I NETWORK  [thread1] connection accepted from 127.0.0.1:53359 #43 (5 connections now open)
+2018-01-04T17:15:39.629+0800 I -        [conn43] end connection 127.0.0.1:53359 (5 connections now open)
+2018-01-04T17:15:39.629+0800 I -        [conn42] end connection 127.0.0.1:53358 (5 connections now open)
+2018-01-04T17:15:39.631+0800 I -        [conn41] end connection 127.0.0.1:52878 (4 connections now open)
+2018-01-04T17:15:39.631+0800 I -        [conn40] end connection 127.0.0.1:52877 (4 connections now open)
+2018-01-04T17:15:40.644+0800 I NETWORK  [thread1] connection accepted from 127.0.0.1:54913 #44 (2 connections now open)
+2018-01-04T17:15:40.644+0800 I NETWORK  [thread1] connection accepted from 127.0.0.1:54914 #45 (3 connections now open)
+2018-01-04T17:15:40.651+0800 I NETWORK  [conn44] received client metadata from 127.0.0.1:54913 conn44: { driver: { name: "nodejs", version: "2.2.33" }, os: { type: "Darwin", name: "darwin", architecture: "x64", version: "15.6.0" }, platform: "Node.js v8.9.1, LE, mongodb-core: 2.1.17" }
+2018-01-04T17:15:40.654+0800 I NETWORK  [conn45] received client metadata from 127.0.0.1:54914 conn45: { driver: { name: "nodejs", version: "2.2.33" }, os: { type: "Darwin", name: "darwin", architecture: "x64", version: "15.6.0" }, platform: "Node.js v8.9.1, LE, mongodb-core: 2.1.17" }
+2018-01-04T17:16:13.857+0800 I NETWORK  [thread1] connection accepted from 127.0.0.1:55011 #46 (4 connections now open)
+2018-01-04T17:16:13.863+0800 I NETWORK  [thread1] connection accepted from 127.0.0.1:55012 #47 (5 connections now open)
+2018-01-04T17:23:30.441+0800 I -        [conn45] end connection 127.0.0.1:54914 (5 connections now open)
+2018-01-04T17:23:30.441+0800 I -        [conn47] end connection 127.0.0.1:55012 (5 connections now open)
+2018-01-04T17:23:30.441+0800 I -        [conn46] end connection 127.0.0.1:55011 (5 connections now open)
+2018-01-04T17:23:30.442+0800 I -        [conn44] end connection 127.0.0.1:54913 (5 connections now open)
+2018-01-04T17:23:31.347+0800 I NETWORK  [thread1] connection accepted from 127.0.0.1:56546 #48 (2 connections now open)
+2018-01-04T17:23:31.347+0800 I NETWORK  [thread1] connection accepted from 127.0.0.1:56547 #49 (3 connections now open)
+2018-01-04T17:23:31.355+0800 I NETWORK  [conn48] received client metadata from 127.0.0.1:56546 conn48: { driver: { name: "nodejs", version: "2.2.33" }, os: { type: "Darwin", name: "darwin", architecture: "x64", version: "15.6.0" }, platform: "Node.js v8.9.1, LE, mongodb-core: 2.1.17" }
+2018-01-04T17:23:31.359+0800 I NETWORK  [conn49] received client metadata from 127.0.0.1:56547 conn49: { driver: { name: "nodejs", version: "2.2.33" }, os: { type: "Darwin", name: "darwin", architecture: "x64", version: "15.6.0" }, platform: "Node.js v8.9.1, LE, mongodb-core: 2.1.17" }
+2018-01-04T17:23:41.943+0800 I NETWORK  [thread1] connection accepted from 127.0.0.1:56593 #50 (4 connections now open)
+2018-01-04T17:23:41.947+0800 I NETWORK  [thread1] connection accepted from 127.0.0.1:56594 #51 (5 connections now open)
+2018-01-04T17:27:16.505+0800 I -        [conn51] end connection 127.0.0.1:56594 (5 connections now open)
+2018-01-04T17:27:16.506+0800 I -        [conn50] end connection 127.0.0.1:56593 (5 connections now open)
+2018-01-04T17:27:16.506+0800 I -        [conn49] end connection 127.0.0.1:56547 (5 connections now open)
+2018-01-04T17:27:16.506+0800 I -        [conn48] end connection 127.0.0.1:56546 (4 connections now open)
+2018-01-04T17:27:17.437+0800 I NETWORK  [thread1] connection accepted from 127.0.0.1:57476 #52 (2 connections now open)
+2018-01-04T17:27:17.437+0800 I NETWORK  [thread1] connection accepted from 127.0.0.1:57477 #53 (3 connections now open)
+2018-01-04T17:27:17.442+0800 I NETWORK  [conn52] received client metadata from 127.0.0.1:57476 conn52: { driver: { name: "nodejs", version: "2.2.33" }, os: { type: "Darwin", name: "darwin", architecture: "x64", version: "15.6.0" }, platform: "Node.js v8.9.1, LE, mongodb-core: 2.1.17" }
+2018-01-04T17:27:17.447+0800 I NETWORK  [conn53] received client metadata from 127.0.0.1:57477 conn53: { driver: { name: "nodejs", version: "2.2.33" }, os: { type: "Darwin", name: "darwin", architecture: "x64", version: "15.6.0" }, platform: "Node.js v8.9.1, LE, mongodb-core: 2.1.17" }
+2018-01-04T17:27:22.860+0800 I -        [conn53] end connection 127.0.0.1:57477 (3 connections now open)
+2018-01-04T17:27:22.860+0800 I -        [conn52] end connection 127.0.0.1:57476 (3 connections now open)
+2018-01-04T17:47:46.085+0800 I NETWORK  [thread1] connection accepted from 127.0.0.1:60320 #54 (2 connections now open)
+2018-01-04T17:47:46.085+0800 I NETWORK  [thread1] connection accepted from 127.0.0.1:60321 #55 (3 connections now open)
+2018-01-04T17:47:46.104+0800 I NETWORK  [conn54] received client metadata from 127.0.0.1:60320 conn54: { driver: { name: "nodejs", version: "2.2.33" }, os: { type: "Darwin", name: "darwin", architecture: "x64", version: "15.6.0" }, platform: "Node.js v8.9.1, LE, mongodb-core: 2.1.17" }
+2018-01-04T17:47:46.109+0800 I NETWORK  [conn55] received client metadata from 127.0.0.1:60321 conn55: { driver: { name: "nodejs", version: "2.2.33" }, os: { type: "Darwin", name: "darwin", architecture: "x64", version: "15.6.0" }, platform: "Node.js v8.9.1, LE, mongodb-core: 2.1.17" }
+2018-01-04T17:53:43.127+0800 I -        [conn55] end connection 127.0.0.1:60321 (3 connections now open)
+2018-01-04T17:53:43.127+0800 I -        [conn54] end connection 127.0.0.1:60320 (3 connections now open)
+2018-01-04T17:53:54.866+0800 I NETWORK  [thread1] connection accepted from 127.0.0.1:61685 #56 (2 connections now open)
+2018-01-04T17:53:54.866+0800 I NETWORK  [thread1] connection accepted from 127.0.0.1:61686 #57 (3 connections now open)
+2018-01-04T17:53:54.880+0800 I NETWORK  [conn56] received client metadata from 127.0.0.1:61685 conn56: { driver: { name: "nodejs", version: "2.2.33" }, os: { type: "Darwin", name: "darwin", architecture: "x64", version: "15.6.0" }, platform: "Node.js v8.9.1, LE, mongodb-core: 2.1.17" }
+2018-01-04T17:53:54.884+0800 I NETWORK  [conn57] received client metadata from 127.0.0.1:61686 conn57: { driver: { name: "nodejs", version: "2.2.33" }, os: { type: "Darwin", name: "darwin", architecture: "x64", version: "15.6.0" }, platform: "Node.js v8.9.1, LE, mongodb-core: 2.1.17" }
+2018-01-04T17:53:59.434+0800 I -        [conn57] end connection 127.0.0.1:61686 (3 connections now open)
+2018-01-04T17:53:59.434+0800 I -        [conn56] end connection 127.0.0.1:61685 (3 connections now open)
+2018-01-05T10:12:14.003+0800 I NETWORK  [thread1] connection accepted from 183.60.48.25:19234 #58 (2 connections now open)
+2018-01-05T10:12:14.015+0800 I NETWORK  [thread1] connection accepted from 183.60.48.25:19233 #59 (3 connections now open)
+2018-01-05T10:12:14.018+0800 I -        [conn59] end connection 183.60.48.25:19233 (3 connections now open)
+2018-01-05T10:12:14.019+0800 I -        [conn58] AssertionException handling request, closing client connection: 17132 SSL handshake received but server is started without SSL support
+2018-01-05T10:12:14.019+0800 I -        [conn58] end connection 183.60.48.25:19234 (2 connections now open)
+2018-01-05T14:36:44.246+0800 I NETWORK  [thread1] connection accepted from 127.0.0.1:62806 #60 (2 connections now open)
+2018-01-05T14:36:44.246+0800 I NETWORK  [thread1] connection accepted from 127.0.0.1:62807 #61 (3 connections now open)
+2018-01-05T14:36:44.252+0800 I NETWORK  [conn60] received client metadata from 127.0.0.1:62806 conn60: { driver: { name: "nodejs", version: "2.2.33" }, os: { type: "Darwin", name: "darwin", architecture: "x64", version: "15.6.0" }, platform: "Node.js v8.9.1, LE, mongodb-core: 2.1.17" }
+2018-01-05T14:36:44.261+0800 I NETWORK  [conn61] received client metadata from 127.0.0.1:62807 conn61: { driver: { name: "nodejs", version: "2.2.33" }, os: { type: "Darwin", name: "darwin", architecture: "x64", version: "15.6.0" }, platform: "Node.js v8.9.1, LE, mongodb-core: 2.1.17" }
+2018-01-05T14:36:56.874+0800 I -        [conn61] end connection 127.0.0.1:62807 (3 connections now open)
+2018-01-05T14:36:56.875+0800 I -        [conn60] end connection 127.0.0.1:62806 (2 connections now open)
+2018-01-05T14:37:32.062+0800 I NETWORK  [thread1] connection accepted from 127.0.0.1:63032 #62 (2 connections now open)
+2018-01-05T14:37:32.063+0800 I NETWORK  [thread1] connection accepted from 127.0.0.1:63033 #63 (3 connections now open)
+2018-01-05T14:37:32.075+0800 I NETWORK  [conn62] received client metadata from 127.0.0.1:63032 conn62: { driver: { name: "nodejs", version: "2.2.33" }, os: { type: "Darwin", name: "darwin", architecture: "x64", version: "15.6.0" }, platform: "Node.js v8.9.1, LE, mongodb-core: 2.1.17" }
+2018-01-05T14:37:32.079+0800 I NETWORK  [conn63] received client metadata from 127.0.0.1:63033 conn63: { driver: { name: "nodejs", version: "2.2.33" }, os: { type: "Darwin", name: "darwin", architecture: "x64", version: "15.6.0" }, platform: "Node.js v8.9.1, LE, mongodb-core: 2.1.17" }
+2018-01-05T14:37:33.702+0800 I NETWORK  [thread1] connection accepted from 127.0.0.1:63048 #64 (4 connections now open)
+2018-01-05T14:37:33.707+0800 I NETWORK  [thread1] connection accepted from 127.0.0.1:63049 #65 (5 connections now open)
+2018-01-05T14:41:43.156+0800 I -        [conn64] end connection 127.0.0.1:63048 (5 connections now open)
+2018-01-05T14:41:43.156+0800 I -        [conn65] end connection 127.0.0.1:63049 (5 connections now open)
+2018-01-05T14:41:43.156+0800 I -        [conn63] end connection 127.0.0.1:63033 (5 connections now open)
+2018-01-05T14:41:43.157+0800 I -        [conn62] end connection 127.0.0.1:63032 (4 connections now open)
+2018-01-05T14:41:57.373+0800 I NETWORK  [thread1] connection accepted from 127.0.0.1:63966 #66 (2 connections now open)
+2018-01-05T14:41:57.373+0800 I NETWORK  [thread1] connection accepted from 127.0.0.1:63967 #67 (3 connections now open)
+2018-01-05T14:41:57.381+0800 I NETWORK  [conn66] received client metadata from 127.0.0.1:63966 conn66: { driver: { name: "nodejs", version: "2.2.33" }, os: { type: "Darwin", name: "darwin", architecture: "x64", version: "15.6.0" }, platform: "Node.js v8.9.1, LE, mongodb-core: 2.1.17" }
+2018-01-05T14:41:57.385+0800 I NETWORK  [conn67] received client metadata from 127.0.0.1:63967 conn67: { driver: { name: "nodejs", version: "2.2.33" }, os: { type: "Darwin", name: "darwin", architecture: "x64", version: "15.6.0" }, platform: "Node.js v8.9.1, LE, mongodb-core: 2.1.17" }
+2018-01-05T14:42:00.699+0800 I -        [conn67] end connection 127.0.0.1:63967 (3 connections now open)
+2018-01-05T14:42:00.699+0800 I -        [conn66] end connection 127.0.0.1:63966 (3 connections now open)
+2018-01-05T14:42:47.116+0800 I NETWORK  [thread1] connection accepted from 127.0.0.1:64210 #68 (2 connections now open)
+2018-01-05T14:42:47.116+0800 I NETWORK  [thread1] connection accepted from 127.0.0.1:64211 #69 (3 connections now open)
+2018-01-05T14:42:47.128+0800 I NETWORK  [conn68] received client metadata from 127.0.0.1:64210 conn68: { driver: { name: "nodejs", version: "2.2.33" }, os: { type: "Darwin", name: "darwin", architecture: "x64", version: "15.6.0" }, platform: "Node.js v8.9.1, LE, mongodb-core: 2.1.17" }
+2018-01-05T14:42:47.132+0800 I NETWORK  [conn69] received client metadata from 127.0.0.1:64211 conn69: { driver: { name: "nodejs", version: "2.2.33" }, os: { type: "Darwin", name: "darwin", architecture: "x64", version: "15.6.0" }, platform: "Node.js v8.9.1, LE, mongodb-core: 2.1.17" }
+2018-01-05T14:42:48.861+0800 I NETWORK  [thread1] connection accepted from 127.0.0.1:64223 #70 (4 connections now open)
+2018-01-05T14:42:48.867+0800 I NETWORK  [thread1] connection accepted from 127.0.0.1:64224 #71 (5 connections now open)
+2018-01-05T14:43:53.236+0800 I NETWORK  [thread1] connection accepted from 127.0.0.1:64494 #72 (6 connections now open)
+2018-01-06T16:00:53.551+0800 I -        [conn71] end connection 127.0.0.1:64224 (6 connections now open)
+2018-01-06T16:00:53.551+0800 I -        [conn68] end connection 127.0.0.1:64210 (6 connections now open)
+2018-01-06T16:00:53.551+0800 I -        [conn72] end connection 127.0.0.1:64494 (6 connections now open)
+2018-01-06T16:00:53.551+0800 I -        [conn69] end connection 127.0.0.1:64211 (6 connections now open)
+2018-01-06T16:00:53.551+0800 I -        [conn70] end connection 127.0.0.1:64223 (6 connections now open)
+2018-01-06T16:00:54.541+0800 I NETWORK  [thread1] connection accepted from 127.0.0.1:52064 #73 (2 connections now open)
+2018-01-06T16:00:54.542+0800 I NETWORK  [thread1] connection accepted from 127.0.0.1:52065 #74 (3 connections now open)
+2018-01-06T16:00:54.547+0800 I NETWORK  [conn73] received client metadata from 127.0.0.1:52064 conn73: { driver: { name: "nodejs", version: "2.2.33" }, os: { type: "Darwin", name: "darwin", architecture: "x64", version: "15.6.0" }, platform: "Node.js v8.9.1, LE, mongodb-core: 2.1.17" }
+2018-01-06T16:00:54.552+0800 I NETWORK  [conn74] received client metadata from 127.0.0.1:52065 conn74: { driver: { name: "nodejs", version: "2.2.33" }, os: { type: "Darwin", name: "darwin", architecture: "x64", version: "15.6.0" }, platform: "Node.js v8.9.1, LE, mongodb-core: 2.1.17" }
+2018-01-06T16:02:17.665+0800 I NETWORK  [thread1] connection accepted from 127.0.0.1:52427 #75 (4 connections now open)
+2018-01-06T16:02:17.672+0800 I NETWORK  [thread1] connection accepted from 127.0.0.1:52428 #76 (5 connections now open)
+2018-01-06T16:02:17.678+0800 I NETWORK  [thread1] connection accepted from 127.0.0.1:52429 #77 (6 connections now open)
+2018-01-06T16:45:41.155+0800 I -        [conn76] end connection 127.0.0.1:52428 (6 connections now open)
+2018-01-06T16:45:41.155+0800 I -        [conn75] end connection 127.0.0.1:52427 (6 connections now open)
+2018-01-06T16:45:41.155+0800 I -        [conn77] end connection 127.0.0.1:52429 (6 connections now open)
+2018-01-06T16:45:41.155+0800 I -        [conn74] end connection 127.0.0.1:52065 (6 connections now open)
+2018-01-06T16:45:41.155+0800 I -        [conn73] end connection 127.0.0.1:52064 (5 connections now open)
+2018-01-06T16:45:42.004+0800 I NETWORK  [thread1] connection accepted from 127.0.0.1:60915 #78 (2 connections now open)
+2018-01-06T16:45:42.005+0800 I NETWORK  [thread1] connection accepted from 127.0.0.1:60916 #79 (3 connections now open)
+2018-01-06T16:45:42.018+0800 I NETWORK  [conn78] received client metadata from 127.0.0.1:60915 conn78: { driver: { name: "nodejs", version: "2.2.33" }, os: { type: "Darwin", name: "darwin", architecture: "x64", version: "15.6.0" }, platform: "Node.js v8.9.1, LE, mongodb-core: 2.1.17" }
+2018-01-06T16:45:42.024+0800 I NETWORK  [conn79] received client metadata from 127.0.0.1:60916 conn79: { driver: { name: "nodejs", version: "2.2.33" }, os: { type: "Darwin", name: "darwin", architecture: "x64", version: "15.6.0" }, platform: "Node.js v8.9.1, LE, mongodb-core: 2.1.17" }
+2018-01-06T16:48:37.324+0800 I NETWORK  [thread1] connection accepted from 127.0.0.1:61648 #80 (4 connections now open)
+2018-01-06T16:50:26.462+0800 I NETWORK  [thread1] connection accepted from 127.0.0.1:62028 #81 (5 connections now open)
+2018-01-06T16:57:49.982+0800 I NETWORK  [thread1] connection accepted from 127.0.0.1:62627 #82 (6 connections now open)
+2018-01-06T17:00:31.063+0800 I -        [conn82] end connection 127.0.0.1:62627 (6 connections now open)
+2018-01-06T17:00:31.063+0800 I -        [conn80] end connection 127.0.0.1:61648 (5 connections now open)
+2018-01-06T17:00:31.063+0800 I -        [conn81] end connection 127.0.0.1:62028 (5 connections now open)
+2018-01-06T17:00:31.063+0800 I -        [conn79] end connection 127.0.0.1:60916 (4 connections now open)
+2018-01-06T17:00:31.064+0800 I -        [conn78] end connection 127.0.0.1:60915 (4 connections now open)
+2018-01-06T17:00:31.810+0800 I NETWORK  [thread1] connection accepted from 127.0.0.1:63297 #83 (2 connections now open)
+2018-01-06T17:00:31.810+0800 I NETWORK  [thread1] connection accepted from 127.0.0.1:63298 #84 (3 connections now open)
+2018-01-06T17:00:31.823+0800 I NETWORK  [conn83] received client metadata from 127.0.0.1:63297 conn83: { driver: { name: "nodejs", version: "2.2.33" }, os: { type: "Darwin", name: "darwin", architecture: "x64", version: "15.6.0" }, platform: "Node.js v8.9.1, LE, mongodb-core: 2.1.17" }
+2018-01-06T17:00:31.831+0800 I NETWORK  [conn84] received client metadata from 127.0.0.1:63298 conn84: { driver: { name: "nodejs", version: "2.2.33" }, os: { type: "Darwin", name: "darwin", architecture: "x64", version: "15.6.0" }, platform: "Node.js v8.9.1, LE, mongodb-core: 2.1.17" }
+2018-01-06T17:00:32.749+0800 I -        [conn83] end connection 127.0.0.1:63297 (3 connections now open)
+2018-01-06T17:00:32.749+0800 I -        [conn84] end connection 127.0.0.1:63298 (3 connections now open)
+2018-01-06T17:00:33.336+0800 I NETWORK  [thread1] connection accepted from 127.0.0.1:63307 #85 (2 connections now open)
+2018-01-06T17:00:33.336+0800 I NETWORK  [thread1] connection accepted from 127.0.0.1:63308 #86 (3 connections now open)
+2018-01-06T17:00:33.349+0800 I NETWORK  [conn85] received client metadata from 127.0.0.1:63307 conn85: { driver: { name: "nodejs", version: "2.2.33" }, os: { type: "Darwin", name: "darwin", architecture: "x64", version: "15.6.0" }, platform: "Node.js v8.9.1, LE, mongodb-core: 2.1.17" }
+2018-01-06T17:00:33.356+0800 I NETWORK  [conn86] received client metadata from 127.0.0.1:63308 conn86: { driver: { name: "nodejs", version: "2.2.33" }, os: { type: "Darwin", name: "darwin", architecture: "x64", version: "15.6.0" }, platform: "Node.js v8.9.1, LE, mongodb-core: 2.1.17" }
+2018-01-06T17:00:39.476+0800 I NETWORK  [thread1] connection accepted from 127.0.0.1:63341 #87 (4 connections now open)
+2018-01-06T17:00:39.484+0800 I NETWORK  [thread1] connection accepted from 127.0.0.1:63342 #88 (5 connections now open)
+2018-01-06T17:00:39.492+0800 I NETWORK  [thread1] connection accepted from 127.0.0.1:63343 #89 (6 connections now open)
+2018-01-06T17:31:02.392+0800 I -        [conn88] end connection 127.0.0.1:63342 (6 connections now open)
+2018-01-06T17:31:02.392+0800 I -        [conn89] end connection 127.0.0.1:63343 (6 connections now open)
+2018-01-06T17:31:02.392+0800 I -        [conn87] end connection 127.0.0.1:63341 (6 connections now open)
+2018-01-06T17:31:02.392+0800 I -        [conn86] end connection 127.0.0.1:63308 (6 connections now open)
+2018-01-06T17:31:02.392+0800 I -        [conn85] end connection 127.0.0.1:63307 (5 connections now open)
+2018-01-06T17:33:13.897+0800 I NETWORK  [thread1] connection accepted from 127.0.0.1:65417 #90 (2 connections now open)
+2018-01-06T17:33:13.897+0800 I NETWORK  [thread1] connection accepted from 127.0.0.1:65418 #91 (3 connections now open)
+2018-01-06T17:33:13.903+0800 I NETWORK  [conn90] received client metadata from 127.0.0.1:65417 conn90: { driver: { name: "nodejs", version: "2.2.33" }, os: { type: "Darwin", name: "darwin", architecture: "x64", version: "15.6.0" }, platform: "Node.js v8.9.1, LE, mongodb-core: 2.1.17" }
+2018-01-06T17:33:13.912+0800 I NETWORK  [conn91] received client metadata from 127.0.0.1:65418 conn91: { driver: { name: "nodejs", version: "2.2.33" }, os: { type: "Darwin", name: "darwin", architecture: "x64", version: "15.6.0" }, platform: "Node.js v8.9.1, LE, mongodb-core: 2.1.17" }
+2018-01-06T17:33:58.036+0800 I NETWORK  [thread1] connection accepted from 127.0.0.1:65434 #92 (4 connections now open)
+2018-01-06T17:33:58.039+0800 I NETWORK  [thread1] connection accepted from 127.0.0.1:65435 #93 (5 connections now open)
+2018-01-06T17:33:58.044+0800 I NETWORK  [thread1] connection accepted from 127.0.0.1:65436 #94 (6 connections now open)
+2018-01-06T17:36:38.302+0800 I -        [conn94] end connection 127.0.0.1:65436 (6 connections now open)
+2018-01-06T17:36:38.302+0800 I -        [conn93] end connection 127.0.0.1:65435 (6 connections now open)
+2018-01-06T17:36:38.302+0800 I -        [conn92] end connection 127.0.0.1:65434 (5 connections now open)
+2018-01-06T17:36:38.302+0800 I -        [conn91] end connection 127.0.0.1:65418 (5 connections now open)
+2018-01-06T17:36:38.302+0800 I -        [conn90] end connection 127.0.0.1:65417 (5 connections now open)
+2018-01-06T17:37:17.965+0800 I NETWORK  [thread1] connection accepted from 127.0.0.1:65518 #95 (2 connections now open)
+2018-01-06T17:37:17.965+0800 I NETWORK  [thread1] connection accepted from 127.0.0.1:65519 #96 (3 connections now open)
+2018-01-06T17:37:17.977+0800 I NETWORK  [conn95] received client metadata from 127.0.0.1:65518 conn95: { driver: { name: "nodejs", version: "2.2.33" }, os: { type: "Darwin", name: "darwin", architecture: "x64", version: "15.6.0" }, platform: "Node.js v8.9.1, LE, mongodb-core: 2.1.17" }
+2018-01-06T17:37:17.981+0800 I NETWORK  [conn96] received client metadata from 127.0.0.1:65519 conn96: { driver: { name: "nodejs", version: "2.2.33" }, os: { type: "Darwin", name: "darwin", architecture: "x64", version: "15.6.0" }, platform: "Node.js v8.9.1, LE, mongodb-core: 2.1.17" }
+2018-01-06T17:37:24.475+0800 I NETWORK  [thread1] connection accepted from 127.0.0.1:65526 #97 (4 connections now open)
+2018-01-06T17:37:24.856+0800 I NETWORK  [thread1] connection accepted from 127.0.0.1:65527 #98 (5 connections now open)
+2018-01-06T17:37:24.867+0800 I NETWORK  [thread1] connection accepted from 127.0.0.1:65528 #99 (6 connections now open)
+2018-01-06T17:39:37.872+0800 I -        [conn99] end connection 127.0.0.1:65528 (6 connections now open)
+2018-01-06T17:39:37.872+0800 I -        [conn97] end connection 127.0.0.1:65526 (6 connections now open)
+2018-01-06T17:39:37.872+0800 I -        [conn98] end connection 127.0.0.1:65527 (6 connections now open)
+2018-01-06T17:39:37.872+0800 I -        [conn96] end connection 127.0.0.1:65519 (6 connections now open)
+2018-01-06T17:39:37.872+0800 I -        [conn95] end connection 127.0.0.1:65518 (5 connections now open)
+2018-01-06T17:39:38.658+0800 I NETWORK  [thread1] connection accepted from 127.0.0.1:49173 #100 (2 connections now open)
+2018-01-06T17:39:38.658+0800 I NETWORK  [thread1] connection accepted from 127.0.0.1:49174 #101 (3 connections now open)
+2018-01-06T17:39:38.667+0800 I NETWORK  [conn100] received client metadata from 127.0.0.1:49173 conn100: { driver: { name: "nodejs", version: "2.2.33" }, os: { type: "Darwin", name: "darwin", architecture: "x64", version: "15.6.0" }, platform: "Node.js v8.9.1, LE, mongodb-core: 2.1.17" }
+2018-01-06T17:39:38.686+0800 I NETWORK  [conn101] received client metadata from 127.0.0.1:49174 conn101: { driver: { name: "nodejs", version: "2.2.33" }, os: { type: "Darwin", name: "darwin", architecture: "x64", version: "15.6.0" }, platform: "Node.js v8.9.1, LE, mongodb-core: 2.1.17" }
+2018-01-06T17:40:13.660+0800 I NETWORK  [thread1] connection accepted from 127.0.0.1:49207 #102 (4 connections now open)
+2018-01-06T17:40:13.663+0800 I NETWORK  [thread1] connection accepted from 127.0.0.1:49208 #103 (5 connections now open)
+2018-01-06T17:40:16.112+0800 I NETWORK  [thread1] connection accepted from 127.0.0.1:49209 #104 (6 connections now open)
+2018-01-06T17:42:12.372+0800 I -        [conn104] end connection 127.0.0.1:49209 (6 connections now open)
+2018-01-06T17:42:12.372+0800 I -        [conn103] end connection 127.0.0.1:49208 (6 connections now open)
+2018-01-06T17:42:12.372+0800 I -        [conn102] end connection 127.0.0.1:49207 (5 connections now open)
+2018-01-06T17:42:12.372+0800 I -        [conn101] end connection 127.0.0.1:49174 (5 connections now open)
+2018-01-06T17:42:12.372+0800 I -        [conn100] end connection 127.0.0.1:49173 (5 connections now open)
+2018-01-06T17:42:13.241+0800 I NETWORK  [thread1] connection accepted from 127.0.0.1:49241 #105 (2 connections now open)
+2018-01-06T17:42:13.241+0800 I NETWORK  [thread1] connection accepted from 127.0.0.1:49242 #106 (3 connections now open)
+2018-01-06T17:42:13.257+0800 I NETWORK  [conn105] received client metadata from 127.0.0.1:49241 conn105: { driver: { name: "nodejs", version: "2.2.33" }, os: { type: "Darwin", name: "darwin", architecture: "x64", version: "15.6.0" }, platform: "Node.js v8.9.1, LE, mongodb-core: 2.1.17" }
+2018-01-06T17:42:13.264+0800 I NETWORK  [conn106] received client metadata from 127.0.0.1:49242 conn106: { driver: { name: "nodejs", version: "2.2.33" }, os: { type: "Darwin", name: "darwin", architecture: "x64", version: "15.6.0" }, platform: "Node.js v8.9.1, LE, mongodb-core: 2.1.17" }
+2018-01-06T17:42:53.371+0800 I -        [conn106] end connection 127.0.0.1:49242 (3 connections now open)
+2018-01-06T17:42:53.371+0800 I -        [conn105] end connection 127.0.0.1:49241 (3 connections now open)
+2018-01-06T17:42:54.108+0800 I NETWORK  [thread1] connection accepted from 127.0.0.1:49248 #107 (2 connections now open)
+2018-01-06T17:42:54.108+0800 I NETWORK  [thread1] connection accepted from 127.0.0.1:49249 #108 (3 connections now open)
+2018-01-06T17:42:54.126+0800 I NETWORK  [conn107] received client metadata from 127.0.0.1:49248 conn107: { driver: { name: "nodejs", version: "2.2.33" }, os: { type: "Darwin", name: "darwin", architecture: "x64", version: "15.6.0" }, platform: "Node.js v8.9.1, LE, mongodb-core: 2.1.17" }
+2018-01-06T17:42:54.130+0800 I NETWORK  [conn108] received client metadata from 127.0.0.1:49249 conn108: { driver: { name: "nodejs", version: "2.2.33" }, os: { type: "Darwin", name: "darwin", architecture: "x64", version: "15.6.0" }, platform: "Node.js v8.9.1, LE, mongodb-core: 2.1.17" }
+2018-01-06T17:43:31.367+0800 I NETWORK  [thread1] connection accepted from 127.0.0.1:49284 #109 (4 connections now open)
+2018-01-06T17:43:31.372+0800 I NETWORK  [thread1] connection accepted from 127.0.0.1:49285 #110 (5 connections now open)
+2018-01-06T17:43:31.381+0800 I NETWORK  [thread1] connection accepted from 127.0.0.1:49286 #111 (6 connections now open)
+2018-01-06T17:47:30.876+0800 I -        [conn111] end connection 127.0.0.1:49286 (6 connections now open)
+2018-01-06T17:47:30.877+0800 I -        [conn110] end connection 127.0.0.1:49285 (5 connections now open)
+2018-01-06T17:47:30.877+0800 I -        [conn109] end connection 127.0.0.1:49284 (4 connections now open)
+2018-01-06T17:47:30.878+0800 I -        [conn108] end connection 127.0.0.1:49249 (3 connections now open)
+2018-01-06T17:47:30.878+0800 I -        [conn107] end connection 127.0.0.1:49248 (2 connections now open)
+2018-01-06T18:01:57.546+0800 I NETWORK  [thread1] connection accepted from 127.0.0.1:49573 #112 (2 connections now open)
+2018-01-06T18:01:57.546+0800 I NETWORK  [thread1] connection accepted from 127.0.0.1:49574 #113 (3 connections now open)
+2018-01-06T18:01:57.552+0800 I NETWORK  [conn112] received client metadata from 127.0.0.1:49573 conn112: { driver: { name: "nodejs", version: "2.2.33" }, os: { type: "Darwin", name: "darwin", architecture: "x64", version: "15.6.0" }, platform: "Node.js v8.9.1, LE, mongodb-core: 2.1.17" }
+2018-01-06T18:01:57.556+0800 I NETWORK  [conn113] received client metadata from 127.0.0.1:49574 conn113: { driver: { name: "nodejs", version: "2.2.33" }, os: { type: "Darwin", name: "darwin", architecture: "x64", version: "15.6.0" }, platform: "Node.js v8.9.1, LE, mongodb-core: 2.1.17" }
+2018-01-06T18:02:00.898+0800 I NETWORK  [thread1] connection accepted from 127.0.0.1:49582 #114 (4 connections now open)
+2018-01-06T18:02:00.904+0800 I NETWORK  [thread1] connection accepted from 127.0.0.1:49583 #115 (5 connections now open)
+2018-01-06T19:12:29.262+0800 I NETWORK  [thread1] connection accepted from 71.6.146.186:57479 #116 (6 connections now open)
+2018-01-06T19:12:34.890+0800 I -        [conn116] end connection 71.6.146.186:57479 (6 connections now open)
+2018-01-06T19:43:36.370+0800 I -        [conn114] end connection 127.0.0.1:49582 (5 connections now open)
+2018-01-06T19:43:36.370+0800 I -        [conn115] end connection 127.0.0.1:49583 (5 connections now open)
+2018-01-06T19:43:36.370+0800 I -        [conn113] end connection 127.0.0.1:49574 (5 connections now open)
+2018-01-06T19:43:36.370+0800 I -        [conn112] end connection 127.0.0.1:49573 (4 connections now open)
+2018-01-06T19:43:37.095+0800 I NETWORK  [thread1] connection accepted from 127.0.0.1:50827 #117 (2 connections now open)
+2018-01-06T19:43:37.095+0800 I NETWORK  [thread1] connection accepted from 127.0.0.1:50828 #118 (3 connections now open)
+2018-01-06T19:43:37.117+0800 I NETWORK  [conn117] received client metadata from 127.0.0.1:50827 conn117: { driver: { name: "nodejs", version: "2.2.33" }, os: { type: "Darwin", name: "darwin", architecture: "x64", version: "15.6.0" }, platform: "Node.js v8.9.1, LE, mongodb-core: 2.1.17" }
+2018-01-06T19:43:37.123+0800 I NETWORK  [conn118] received client metadata from 127.0.0.1:50828 conn118: { driver: { name: "nodejs", version: "2.2.33" }, os: { type: "Darwin", name: "darwin", architecture: "x64", version: "15.6.0" }, platform: "Node.js v8.9.1, LE, mongodb-core: 2.1.17" }
+2018-01-06T19:44:48.795+0800 I -        [conn117] end connection 127.0.0.1:50827 (3 connections now open)
+2018-01-06T19:44:48.795+0800 I -        [conn118] end connection 127.0.0.1:50828 (3 connections now open)
+2018-01-06T19:44:49.468+0800 I NETWORK  [thread1] connection accepted from 127.0.0.1:50846 #119 (2 connections now open)
+2018-01-06T19:44:49.468+0800 I NETWORK  [thread1] connection accepted from 127.0.0.1:50847 #120 (3 connections now open)
+2018-01-06T19:44:49.493+0800 I NETWORK  [conn119] received client metadata from 127.0.0.1:50846 conn119: { driver: { name: "nodejs", version: "2.2.33" }, os: { type: "Darwin", name: "darwin", architecture: "x64", version: "15.6.0" }, platform: "Node.js v8.9.1, LE, mongodb-core: 2.1.17" }
+2018-01-06T19:44:49.500+0800 I NETWORK  [conn120] received client metadata from 127.0.0.1:50847 conn120: { driver: { name: "nodejs", version: "2.2.33" }, os: { type: "Darwin", name: "darwin", architecture: "x64", version: "15.6.0" }, platform: "Node.js v8.9.1, LE, mongodb-core: 2.1.17" }
+2018-01-06T19:44:51.411+0800 I -        [conn120] end connection 127.0.0.1:50847 (3 connections now open)
+2018-01-06T19:44:51.411+0800 I -        [conn119] end connection 127.0.0.1:50846 (3 connections now open)
+2018-01-06T19:44:52.102+0800 I NETWORK  [thread1] connection accepted from 127.0.0.1:50848 #121 (2 connections now open)
+2018-01-06T19:44:52.102+0800 I NETWORK  [thread1] connection accepted from 127.0.0.1:50849 #122 (3 connections now open)
+2018-01-06T19:44:52.117+0800 I NETWORK  [conn121] received client metadata from 127.0.0.1:50848 conn121: { driver: { name: "nodejs", version: "2.2.33" }, os: { type: "Darwin", name: "darwin", architecture: "x64", version: "15.6.0" }, platform: "Node.js v8.9.1, LE, mongodb-core: 2.1.17" }
+2018-01-06T19:44:52.121+0800 I NETWORK  [conn122] received client metadata from 127.0.0.1:50849 conn122: { driver: { name: "nodejs", version: "2.2.33" }, os: { type: "Darwin", name: "darwin", architecture: "x64", version: "15.6.0" }, platform: "Node.js v8.9.1, LE, mongodb-core: 2.1.17" }
+2018-01-06T19:53:44.457+0800 I -        [conn122] end connection 127.0.0.1:50849 (3 connections now open)
+2018-01-06T19:53:44.457+0800 I -        [conn121] end connection 127.0.0.1:50848 (3 connections now open)
+2018-01-06T19:53:45.310+0800 I NETWORK  [thread1] connection accepted from 127.0.0.1:50946 #123 (2 connections now open)
+2018-01-06T19:53:45.311+0800 I NETWORK  [thread1] connection accepted from 127.0.0.1:50947 #124 (3 connections now open)
+2018-01-06T19:53:45.320+0800 I NETWORK  [conn123] received client metadata from 127.0.0.1:50946 conn123: { driver: { name: "nodejs", version: "2.2.33" }, os: { type: "Darwin", name: "darwin", architecture: "x64", version: "15.6.0" }, platform: "Node.js v8.9.1, LE, mongodb-core: 2.1.17" }
+2018-01-06T19:53:45.325+0800 I NETWORK  [conn124] received client metadata from 127.0.0.1:50947 conn124: { driver: { name: "nodejs", version: "2.2.33" }, os: { type: "Darwin", name: "darwin", architecture: "x64", version: "15.6.0" }, platform: "Node.js v8.9.1, LE, mongodb-core: 2.1.17" }
+2018-01-06T19:57:06.038+0800 I NETWORK  [thread1] connection accepted from 127.0.0.1:50992 #125 (4 connections now open)
+2018-01-06T19:57:06.044+0800 I NETWORK  [thread1] connection accepted from 127.0.0.1:50993 #126 (5 connections now open)
+2018-01-06T20:01:15.625+0800 I NETWORK  [thread1] connection accepted from 127.0.0.1:51157 #127 (6 connections now open)
+2018-01-06T20:05:15.424+0800 I -        [conn127] end connection 127.0.0.1:51157 (6 connections now open)
+2018-01-06T20:05:15.425+0800 I -        [conn126] end connection 127.0.0.1:50993 (5 connections now open)
+2018-01-06T20:05:15.426+0800 I -        [conn125] end connection 127.0.0.1:50992 (4 connections now open)
+2018-01-06T20:05:15.426+0800 I -        [conn124] end connection 127.0.0.1:50947 (3 connections now open)
+2018-01-06T20:05:15.427+0800 I -        [conn123] end connection 127.0.0.1:50946 (2 connections now open)
+2018-01-06T20:05:16.443+0800 I NETWORK  [thread1] connection accepted from 127.0.0.1:51522 #128 (2 connections now open)
+2018-01-06T20:05:16.443+0800 I NETWORK  [thread1] connection accepted from 127.0.0.1:51523 #129 (3 connections now open)
+2018-01-06T20:05:16.448+0800 I NETWORK  [conn128] received client metadata from 127.0.0.1:51522 conn128: { driver: { name: "nodejs", version: "2.2.33" }, os: { type: "Darwin", name: "darwin", architecture: "x64", version: "15.6.0" }, platform: "Node.js v8.9.1, LE, mongodb-core: 2.1.17" }
+2018-01-06T20:05:16.454+0800 I NETWORK  [conn129] received client metadata from 127.0.0.1:51523 conn129: { driver: { name: "nodejs", version: "2.2.33" }, os: { type: "Darwin", name: "darwin", architecture: "x64", version: "15.6.0" }, platform: "Node.js v8.9.1, LE, mongodb-core: 2.1.17" }
+2018-01-06T20:05:17.548+0800 I NETWORK  [thread1] connection accepted from 127.0.0.1:51534 #130 (4 connections now open)
+2018-01-06T20:05:17.555+0800 I NETWORK  [thread1] connection accepted from 127.0.0.1:51535 #131 (5 connections now open)
+2018-01-06T20:20:26.821+0800 I -        [conn131] end connection 127.0.0.1:51535 (5 connections now open)
+2018-01-06T20:20:26.821+0800 I -        [conn130] end connection 127.0.0.1:51534 (4 connections now open)
+2018-01-06T20:20:26.822+0800 I -        [conn129] end connection 127.0.0.1:51523 (3 connections now open)
+2018-01-06T20:20:26.822+0800 I -        [conn128] end connection 127.0.0.1:51522 (2 connections now open)
+2018-01-06T20:20:27.516+0800 I NETWORK  [thread1] connection accepted from 127.0.0.1:55414 #132 (2 connections now open)
+2018-01-06T20:20:27.516+0800 I NETWORK  [thread1] connection accepted from 127.0.0.1:55415 #133 (3 connections now open)
+2018-01-06T20:20:27.534+0800 I NETWORK  [conn132] received client metadata from 127.0.0.1:55414 conn132: { driver: { name: "nodejs", version: "2.2.33" }, os: { type: "Darwin", name: "darwin", architecture: "x64", version: "15.6.0" }, platform: "Node.js v8.9.1, LE, mongodb-core: 2.1.17" }
+2018-01-06T20:20:27.540+0800 I NETWORK  [conn133] received client metadata from 127.0.0.1:55415 conn133: { driver: { name: "nodejs", version: "2.2.33" }, os: { type: "Darwin", name: "darwin", architecture: "x64", version: "15.6.0" }, platform: "Node.js v8.9.1, LE, mongodb-core: 2.1.17" }
+2018-01-06T20:20:39.437+0800 I NETWORK  [thread1] connection accepted from 127.0.0.1:55475 #134 (4 connections now open)
+2018-01-06T20:20:39.441+0800 I NETWORK  [thread1] connection accepted from 127.0.0.1:55476 #135 (5 connections now open)
+2018-01-06T20:28:27.104+0800 I -        [conn135] end connection 127.0.0.1:55476 (5 connections now open)
+2018-01-06T20:28:27.104+0800 I -        [conn133] end connection 127.0.0.1:55415 (5 connections now open)
+2018-01-06T20:28:27.104+0800 I -        [conn134] end connection 127.0.0.1:55475 (5 connections now open)
+2018-01-06T20:28:27.104+0800 I -        [conn132] end connection 127.0.0.1:55414 (5 connections now open)
+2018-01-06T20:28:27.760+0800 I NETWORK  [thread1] connection accepted from 127.0.0.1:55634 #136 (2 connections now open)
+2018-01-06T20:28:27.760+0800 I NETWORK  [thread1] connection accepted from 127.0.0.1:55635 #137 (3 connections now open)
+2018-01-06T20:28:27.776+0800 I NETWORK  [conn136] received client metadata from 127.0.0.1:55634 conn136: { driver: { name: "nodejs", version: "2.2.33" }, os: { type: "Darwin", name: "darwin", architecture: "x64", version: "15.6.0" }, platform: "Node.js v8.9.1, LE, mongodb-core: 2.1.17" }
+2018-01-06T20:28:27.780+0800 I NETWORK  [conn137] received client metadata from 127.0.0.1:55635 conn137: { driver: { name: "nodejs", version: "2.2.33" }, os: { type: "Darwin", name: "darwin", architecture: "x64", version: "15.6.0" }, platform: "Node.js v8.9.1, LE, mongodb-core: 2.1.17" }
+2018-01-06T20:28:30.019+0800 I NETWORK  [thread1] connection accepted from 127.0.0.1:55641 #138 (4 connections now open)
+2018-01-06T20:28:30.023+0800 I NETWORK  [thread1] connection accepted from 127.0.0.1:55642 #139 (5 connections now open)
+2018-01-06T20:51:37.544+0800 I -        [conn139] end connection 127.0.0.1:55642 (5 connections now open)
+2018-01-06T20:51:37.544+0800 I -        [conn137] end connection 127.0.0.1:55635 (5 connections now open)
+2018-01-06T20:51:37.544+0800 I -        [conn138] end connection 127.0.0.1:55641 (5 connections now open)
+2018-01-06T20:51:37.544+0800 I -        [conn136] end connection 127.0.0.1:55634 (5 connections now open)
+2018-01-06T20:51:38.260+0800 I NETWORK  [thread1] connection accepted from 127.0.0.1:55743 #140 (2 connections now open)
+2018-01-06T20:51:38.261+0800 I NETWORK  [thread1] connection accepted from 127.0.0.1:55744 #141 (3 connections now open)
+2018-01-06T20:51:38.278+0800 I NETWORK  [conn140] received client metadata from 127.0.0.1:55743 conn140: { driver: { name: "nodejs", version: "2.2.33" }, os: { type: "Darwin", name: "darwin", architecture: "x64", version: "15.6.0" }, platform: "Node.js v8.9.1, LE, mongodb-core: 2.1.17" }
+2018-01-06T20:51:38.282+0800 I NETWORK  [conn141] received client metadata from 127.0.0.1:55744 conn141: { driver: { name: "nodejs", version: "2.2.33" }, os: { type: "Darwin", name: "darwin", architecture: "x64", version: "15.6.0" }, platform: "Node.js v8.9.1, LE, mongodb-core: 2.1.17" }
+2018-01-06T20:52:30.167+0800 I -        [conn141] end connection 127.0.0.1:55744 (3 connections now open)
+2018-01-06T20:52:30.167+0800 I -        [conn140] end connection 127.0.0.1:55743 (3 connections now open)
+2018-01-06T20:52:30.876+0800 I NETWORK  [thread1] connection accepted from 127.0.0.1:55759 #142 (2 connections now open)
+2018-01-06T20:52:30.876+0800 I NETWORK  [thread1] connection accepted from 127.0.0.1:55760 #143 (3 connections now open)
+2018-01-06T20:52:30.889+0800 I NETWORK  [conn142] received client metadata from 127.0.0.1:55759 conn142: { driver: { name: "nodejs", version: "2.2.33" }, os: { type: "Darwin", name: "darwin", architecture: "x64", version: "15.6.0" }, platform: "Node.js v8.9.1, LE, mongodb-core: 2.1.17" }
+2018-01-06T20:52:30.893+0800 I NETWORK  [conn143] received client metadata from 127.0.0.1:55760 conn143: { driver: { name: "nodejs", version: "2.2.33" }, os: { type: "Darwin", name: "darwin", architecture: "x64", version: "15.6.0" }, platform: "Node.js v8.9.1, LE, mongodb-core: 2.1.17" }
+2018-01-06T20:52:34.556+0800 I NETWORK  [thread1] connection accepted from 127.0.0.1:55767 #144 (4 connections now open)
+2018-01-06T20:52:34.562+0800 I NETWORK  [thread1] connection accepted from 127.0.0.1:55768 #145 (5 connections now open)
+2018-01-06T20:54:08.149+0800 I -        [conn143] end connection 127.0.0.1:55760 (5 connections now open)
+2018-01-06T20:54:08.149+0800 I -        [conn145] end connection 127.0.0.1:55768 (5 connections now open)
+2018-01-06T20:54:08.149+0800 I -        [conn144] end connection 127.0.0.1:55767 (5 connections now open)
+2018-01-06T20:54:08.150+0800 I -        [conn142] end connection 127.0.0.1:55759 (5 connections now open)
+2018-01-06T20:54:08.850+0800 I NETWORK  [thread1] connection accepted from 127.0.0.1:55783 #146 (2 connections now open)
+2018-01-06T20:54:08.850+0800 I NETWORK  [thread1] connection accepted from 127.0.0.1:55784 #147 (3 connections now open)
+2018-01-06T20:54:08.867+0800 I NETWORK  [conn146] received client metadata from 127.0.0.1:55783 conn146: { driver: { name: "nodejs", version: "2.2.33" }, os: { type: "Darwin", name: "darwin", architecture: "x64", version: "15.6.0" }, platform: "Node.js v8.9.1, LE, mongodb-core: 2.1.17" }
+2018-01-06T20:54:08.870+0800 I NETWORK  [conn147] received client metadata from 127.0.0.1:55784 conn147: { driver: { name: "nodejs", version: "2.2.33" }, os: { type: "Darwin", name: "darwin", architecture: "x64", version: "15.6.0" }, platform: "Node.js v8.9.1, LE, mongodb-core: 2.1.17" }
+2018-01-06T20:54:21.129+0800 I NETWORK  [thread1] connection accepted from 127.0.0.1:55794 #148 (4 connections now open)
+2018-01-06T20:54:21.135+0800 I NETWORK  [thread1] connection accepted from 127.0.0.1:55795 #149 (5 connections now open)
+2018-01-06T20:57:13.259+0800 I NETWORK  [thread1] connection accepted from 127.0.0.1:55840 #150 (6 connections now open)
+2018-01-06T21:07:57.412+0800 I -        [conn150] end connection 127.0.0.1:55840 (6 connections now open)
+2018-01-06T21:07:57.412+0800 I -        [conn149] end connection 127.0.0.1:55795 (5 connections now open)
+2018-01-06T21:07:57.412+0800 I -        [conn148] end connection 127.0.0.1:55794 (5 connections now open)
+2018-01-06T21:07:57.412+0800 I -        [conn146] end connection 127.0.0.1:55783 (3 connections now open)
+2018-01-06T21:07:57.412+0800 I -        [conn147] end connection 127.0.0.1:55784 (2 connections now open)
+2018-01-06T21:07:58.172+0800 I NETWORK  [thread1] connection accepted from 127.0.0.1:55958 #151 (2 connections now open)
+2018-01-06T21:07:58.172+0800 I NETWORK  [thread1] connection accepted from 127.0.0.1:55959 #152 (3 connections now open)
+2018-01-06T21:07:58.187+0800 I NETWORK  [conn151] received client metadata from 127.0.0.1:55958 conn151: { driver: { name: "nodejs", version: "2.2.33" }, os: { type: "Darwin", name: "darwin", architecture: "x64", version: "15.6.0" }, platform: "Node.js v8.9.1, LE, mongodb-core: 2.1.17" }
+2018-01-06T21:07:58.191+0800 I NETWORK  [conn152] received client metadata from 127.0.0.1:55959 conn152: { driver: { name: "nodejs", version: "2.2.33" }, os: { type: "Darwin", name: "darwin", architecture: "x64", version: "15.6.0" }, platform: "Node.js v8.9.1, LE, mongodb-core: 2.1.17" }
+2018-01-06T21:08:00.152+0800 I NETWORK  [thread1] connection accepted from 127.0.0.1:55964 #153 (4 connections now open)
+2018-01-06T21:08:00.157+0800 I NETWORK  [thread1] connection accepted from 127.0.0.1:55965 #154 (5 connections now open)
+2018-01-06T21:08:32.918+0800 I -        [conn152] end connection 127.0.0.1:55959 (5 connections now open)
+2018-01-06T21:08:32.918+0800 I -        [conn154] end connection 127.0.0.1:55965 (5 connections now open)
+2018-01-06T21:08:32.918+0800 I -        [conn153] end connection 127.0.0.1:55964 (5 connections now open)
+2018-01-06T21:08:32.918+0800 I -        [conn151] end connection 127.0.0.1:55958 (5 connections now open)
+2018-01-06T21:08:33.509+0800 I NETWORK  [thread1] connection accepted from 127.0.0.1:55973 #155 (2 connections now open)
+2018-01-06T21:08:33.509+0800 I NETWORK  [thread1] connection accepted from 127.0.0.1:55974 #156 (3 connections now open)
+2018-01-06T21:08:33.527+0800 I NETWORK  [conn155] received client metadata from 127.0.0.1:55973 conn155: { driver: { name: "nodejs", version: "2.2.33" }, os: { type: "Darwin", name: "darwin", architecture: "x64", version: "15.6.0" }, platform: "Node.js v8.9.1, LE, mongodb-core: 2.1.17" }
+2018-01-06T21:08:33.531+0800 I NETWORK  [conn156] received client metadata from 127.0.0.1:55974 conn156: { driver: { name: "nodejs", version: "2.2.33" }, os: { type: "Darwin", name: "darwin", architecture: "x64", version: "15.6.0" }, platform: "Node.js v8.9.1, LE, mongodb-core: 2.1.17" }
+2018-01-06T21:09:17.857+0800 I NETWORK  [thread1] connection accepted from 127.0.0.1:55990 #157 (4 connections now open)
+2018-01-06T21:09:17.861+0800 I NETWORK  [thread1] connection accepted from 127.0.0.1:55991 #158 (5 connections now open)
+2018-01-06T21:17:40.191+0800 I -        [conn158] end connection 127.0.0.1:55991 (5 connections now open)
+2018-01-06T21:17:40.191+0800 I -        [conn157] end connection 127.0.0.1:55990 (5 connections now open)
+2018-01-06T21:17:40.191+0800 I -        [conn156] end connection 127.0.0.1:55974 (5 connections now open)
+2018-01-06T21:17:40.191+0800 I -        [conn155] end connection 127.0.0.1:55973 (5 connections now open)
+2018-01-06T21:17:40.962+0800 I NETWORK  [thread1] connection accepted from 127.0.0.1:56072 #159 (2 connections now open)
+2018-01-06T21:17:40.963+0800 I NETWORK  [thread1] connection accepted from 127.0.0.1:56073 #160 (3 connections now open)
+2018-01-06T21:17:40.975+0800 I NETWORK  [conn159] received client metadata from 127.0.0.1:56072 conn159: { driver: { name: "nodejs", version: "2.2.33" }, os: { type: "Darwin", name: "darwin", architecture: "x64", version: "15.6.0" }, platform: "Node.js v8.9.1, LE, mongodb-core: 2.1.17" }
+2018-01-06T21:17:40.979+0800 I NETWORK  [conn160] received client metadata from 127.0.0.1:56073 conn160: { driver: { name: "nodejs", version: "2.2.33" }, os: { type: "Darwin", name: "darwin", architecture: "x64", version: "15.6.0" }, platform: "Node.js v8.9.1, LE, mongodb-core: 2.1.17" }
+2018-01-06T21:17:47.355+0800 I NETWORK  [thread1] connection accepted from 127.0.0.1:56077 #161 (4 connections now open)
+2018-01-06T21:17:47.362+0800 I NETWORK  [thread1] connection accepted from 127.0.0.1:56078 #162 (5 connections now open)
+2018-01-06T21:24:40.207+0800 I -        [conn162] end connection 127.0.0.1:56078 (5 connections now open)
+2018-01-06T21:24:40.207+0800 I -        [conn161] end connection 127.0.0.1:56077 (5 connections now open)
+2018-01-06T21:24:40.207+0800 I -        [conn160] end connection 127.0.0.1:56073 (4 connections now open)
+2018-01-06T21:24:40.207+0800 I -        [conn159] end connection 127.0.0.1:56072 (4 connections now open)
+2018-01-06T21:24:40.953+0800 I NETWORK  [thread1] connection accepted from 127.0.0.1:56150 #163 (2 connections now open)
+2018-01-06T21:24:40.953+0800 I NETWORK  [thread1] connection accepted from 127.0.0.1:56151 #164 (3 connections now open)
+2018-01-06T21:24:40.958+0800 I NETWORK  [conn163] received client metadata from 127.0.0.1:56150 conn163: { driver: { name: "nodejs", version: "2.2.33" }, os: { type: "Darwin", name: "darwin", architecture: "x64", version: "15.6.0" }, platform: "Node.js v8.9.1, LE, mongodb-core: 2.1.17" }
+2018-01-06T21:24:40.962+0800 I NETWORK  [conn164] received client metadata from 127.0.0.1:56151 conn164: { driver: { name: "nodejs", version: "2.2.33" }, os: { type: "Darwin", name: "darwin", architecture: "x64", version: "15.6.0" }, platform: "Node.js v8.9.1, LE, mongodb-core: 2.1.17" }
+2018-01-06T21:24:50.331+0800 I NETWORK  [thread1] connection accepted from 127.0.0.1:56156 #165 (4 connections now open)
+2018-01-06T21:24:50.334+0800 I NETWORK  [thread1] connection accepted from 127.0.0.1:56157 #166 (5 connections now open)
+2018-01-06T21:41:08.066+0800 I -        [conn166] end connection 127.0.0.1:56157 (5 connections now open)
+2018-01-06T21:41:08.067+0800 I -        [conn165] end connection 127.0.0.1:56156 (4 connections now open)
+2018-01-06T21:41:08.067+0800 I -        [conn164] end connection 127.0.0.1:56151 (3 connections now open)
+2018-01-06T21:41:08.067+0800 I -        [conn163] end connection 127.0.0.1:56150 (2 connections now open)
+2018-01-06T21:41:09.013+0800 I NETWORK  [thread1] connection accepted from 127.0.0.1:56403 #167 (2 connections now open)
+2018-01-06T21:41:09.013+0800 I NETWORK  [thread1] connection accepted from 127.0.0.1:56404 #168 (3 connections now open)
+2018-01-06T21:41:09.030+0800 I NETWORK  [conn167] received client metadata from 127.0.0.1:56403 conn167: { driver: { name: "nodejs", version: "2.2.33" }, os: { type: "Darwin", name: "darwin", architecture: "x64", version: "15.6.0" }, platform: "Node.js v8.9.1, LE, mongodb-core: 2.1.17" }
+2018-01-06T21:41:09.038+0800 I NETWORK  [conn168] received client metadata from 127.0.0.1:56404 conn168: { driver: { name: "nodejs", version: "2.2.33" }, os: { type: "Darwin", name: "darwin", architecture: "x64", version: "15.6.0" }, platform: "Node.js v8.9.1, LE, mongodb-core: 2.1.17" }
+2018-01-06T21:41:53.149+0800 I -        [conn167] end connection 127.0.0.1:56403 (3 connections now open)
+2018-01-06T21:41:53.149+0800 I -        [conn168] end connection 127.0.0.1:56404 (3 connections now open)
+2018-01-06T21:48:19.769+0800 I NETWORK  [thread1] connection accepted from 127.0.0.1:56505 #169 (2 connections now open)
+2018-01-06T21:48:19.770+0800 I NETWORK  [thread1] connection accepted from 127.0.0.1:56506 #170 (3 connections now open)
+2018-01-06T21:48:19.778+0800 I NETWORK  [conn169] received client metadata from 127.0.0.1:56505 conn169: { driver: { name: "nodejs", version: "2.2.33" }, os: { type: "Darwin", name: "darwin", architecture: "x64", version: "15.6.0" }, platform: "Node.js v8.9.1, LE, mongodb-core: 2.1.17" }
+2018-01-06T21:48:19.784+0800 I NETWORK  [conn170] received client metadata from 127.0.0.1:56506 conn170: { driver: { name: "nodejs", version: "2.2.33" }, os: { type: "Darwin", name: "darwin", architecture: "x64", version: "15.6.0" }, platform: "Node.js v8.9.1, LE, mongodb-core: 2.1.17" }
+2018-01-06T21:51:19.393+0800 I -        [conn169] end connection 127.0.0.1:56505 (3 connections now open)
+2018-01-06T21:51:19.393+0800 I -        [conn170] end connection 127.0.0.1:56506 (3 connections now open)
+2018-01-06T21:54:31.004+0800 I NETWORK  [thread1] connection accepted from 127.0.0.1:56602 #171 (2 connections now open)
+2018-01-06T21:54:31.004+0800 I NETWORK  [thread1] connection accepted from 127.0.0.1:56603 #172 (3 connections now open)
+2018-01-06T21:54:31.019+0800 I NETWORK  [conn171] received client metadata from 127.0.0.1:56602 conn171: { driver: { name: "nodejs", version: "2.2.33" }, os: { type: "Darwin", name: "darwin", architecture: "x64", version: "15.6.0" }, platform: "Node.js v8.9.1, LE, mongodb-core: 2.1.17" }
+2018-01-06T21:54:31.023+0800 I NETWORK  [conn172] received client metadata from 127.0.0.1:56603 conn172: { driver: { name: "nodejs", version: "2.2.33" }, os: { type: "Darwin", name: "darwin", architecture: "x64", version: "15.6.0" }, platform: "Node.js v8.9.1, LE, mongodb-core: 2.1.17" }
+2018-01-06T21:55:37.164+0800 I NETWORK  [thread1] connection accepted from 127.0.0.1:56622 #173 (4 connections now open)
+2018-01-06T21:55:37.168+0800 I NETWORK  [thread1] connection accepted from 127.0.0.1:56623 #174 (5 connections now open)
+2018-01-06T21:55:37.172+0800 I NETWORK  [thread1] connection accepted from 127.0.0.1:56624 #175 (6 connections now open)
+2018-01-06T22:01:15.595+0800 I -        [conn175] end connection 127.0.0.1:56624 (6 connections now open)
+2018-01-06T22:01:15.597+0800 I -        [conn174] end connection 127.0.0.1:56623 (5 connections now open)
+2018-01-06T22:01:15.598+0800 I -        [conn173] end connection 127.0.0.1:56622 (4 connections now open)
+2018-01-06T22:01:15.599+0800 I -        [conn172] end connection 127.0.0.1:56603 (3 connections now open)
+2018-01-06T22:01:15.600+0800 I -        [conn171] end connection 127.0.0.1:56602 (2 connections now open)
+2018-01-06T22:01:26.061+0800 I -        [conn1] end connection 127.0.0.1:49617 (1 connection now open)
+2018-01-06T22:07:23.792+0800 I NETWORK  [thread1] connection accepted from 127.0.0.1:56827 #176 (1 connection now open)
+2018-01-06T22:07:23.792+0800 I NETWORK  [conn176] received client metadata from 127.0.0.1:56827 conn176: { application: { name: "MongoDB Shell" }, driver: { name: "MongoDB Internal Client", version: "3.4.10" }, os: { type: "Darwin", name: "Mac OS X", architecture: "x86_64", version: "15.6.0" } }
+2018-01-06T22:07:32.391+0800 I NETWORK  [thread1] connection accepted from 127.0.0.1:56830 #177 (2 connections now open)
+2018-01-06T22:07:32.391+0800 I NETWORK  [thread1] connection accepted from 127.0.0.1:56831 #178 (3 connections now open)
+2018-01-06T22:07:32.406+0800 I NETWORK  [conn177] received client metadata from 127.0.0.1:56830 conn177: { driver: { name: "nodejs", version: "2.2.33" }, os: { type: "Darwin", name: "darwin", architecture: "x64", version: "15.6.0" }, platform: "Node.js v8.9.1, LE, mongodb-core: 2.1.17" }
+2018-01-06T22:07:32.411+0800 I NETWORK  [conn178] received client metadata from 127.0.0.1:56831 conn178: { driver: { name: "nodejs", version: "2.2.33" }, os: { type: "Darwin", name: "darwin", architecture: "x64", version: "15.6.0" }, platform: "Node.js v8.9.1, LE, mongodb-core: 2.1.17" }
+2018-01-06T22:07:46.149+0800 I NETWORK  [thread1] connection accepted from 127.0.0.1:56841 #179 (4 connections now open)
+2018-01-06T22:07:46.159+0800 I NETWORK  [thread1] connection accepted from 127.0.0.1:56842 #180 (5 connections now open)
+2018-01-06T22:07:52.103+0800 I NETWORK  [thread1] connection accepted from 127.0.0.1:56845 #181 (6 connections now open)
+2018-01-06T22:07:52.264+0800 I NETWORK  [thread1] connection accepted from 127.0.0.1:56847 #182 (7 connections now open)
+2018-01-06T22:13:47.672+0800 I -        [conn180] end connection 127.0.0.1:56842 (7 connections now open)
+2018-01-06T22:13:47.672+0800 I -        [conn179] end connection 127.0.0.1:56841 (6 connections now open)
+2018-01-06T22:13:47.672+0800 I -        [conn182] end connection 127.0.0.1:56847 (5 connections now open)
+2018-01-06T22:13:47.673+0800 I -        [conn181] end connection 127.0.0.1:56845 (4 connections now open)
+2018-01-06T22:13:47.673+0800 I -        [conn178] end connection 127.0.0.1:56831 (3 connections now open)
+2018-01-06T22:13:47.673+0800 I -        [conn177] end connection 127.0.0.1:56830 (2 connections now open)
+2018-01-06T22:13:48.518+0800 I NETWORK  [thread1] connection accepted from 127.0.0.1:56987 #183 (2 connections now open)
+2018-01-06T22:13:48.518+0800 I NETWORK  [thread1] connection accepted from 127.0.0.1:56988 #184 (3 connections now open)
+2018-01-06T22:13:48.524+0800 I NETWORK  [conn183] received client metadata from 127.0.0.1:56987 conn183: { driver: { name: "nodejs", version: "2.2.33" }, os: { type: "Darwin", name: "darwin", architecture: "x64", version: "15.6.0" }, platform: "Node.js v8.9.1, LE, mongodb-core: 2.1.17" }
+2018-01-06T22:13:48.529+0800 I NETWORK  [conn184] received client metadata from 127.0.0.1:56988 conn184: { driver: { name: "nodejs", version: "2.2.33" }, os: { type: "Darwin", name: "darwin", architecture: "x64", version: "15.6.0" }, platform: "Node.js v8.9.1, LE, mongodb-core: 2.1.17" }
+2018-01-06T22:15:25.831+0800 I -        [conn184] end connection 127.0.0.1:56988 (3 connections now open)
+2018-01-06T22:15:25.831+0800 I -        [conn183] end connection 127.0.0.1:56987 (3 connections now open)
+2018-01-06T22:15:26.542+0800 I NETWORK  [thread1] connection accepted from 127.0.0.1:57014 #185 (2 connections now open)
+2018-01-06T22:15:26.543+0800 I NETWORK  [thread1] connection accepted from 127.0.0.1:57015 #186 (3 connections now open)
+2018-01-06T22:15:26.548+0800 I NETWORK  [conn185] received client metadata from 127.0.0.1:57014 conn185: { driver: { name: "nodejs", version: "2.2.33" }, os: { type: "Darwin", name: "darwin", architecture: "x64", version: "15.6.0" }, platform: "Node.js v8.9.1, LE, mongodb-core: 2.1.17" }
+2018-01-06T22:15:26.551+0800 I NETWORK  [conn186] received client metadata from 127.0.0.1:57015 conn186: { driver: { name: "nodejs", version: "2.2.33" }, os: { type: "Darwin", name: "darwin", architecture: "x64", version: "15.6.0" }, platform: "Node.js v8.9.1, LE, mongodb-core: 2.1.17" }
