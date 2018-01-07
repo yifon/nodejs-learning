@@ -13,10 +13,9 @@ https://www.imooc.com/learn/295
 3. ./bin/mongo 127.0.0.1:12345
 
 #movie:
---------------------
+------------------
 这个文件夹主要是node的建站实战，这个教程可以实现搭建一个简单的网站。需掌握jade,node.js,mongodb,express,bootstrap,jquery,grunt...数据库可使用上述的mongodb_simple直接启动，并在数据库中use imooc
 ##在mac下启动命令：
---------------
 grunt
 
 整个路径的学习可以参考慕课网Scott老师的几个教程：
