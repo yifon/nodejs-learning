@@ -14,7 +14,7 @@ var bodyParser = require('body-parser')
 var cookieParser = require('cookie-parser');
 //var cookieSession = require('cookie-session');//这种方式在下面的mongodb会话持久化中引入有问题
 var expressSession = require('express-session');
-var multipart=require('connect-multiparty');
+var multipart = require('connect-multiparty');
 
 //利用mongodb做会话的持久化
 //var mongoStore = require('connect-mongo')(express);//此方式已经不支持
@@ -24,6 +24,25 @@ var logger = require('morgan');
 
 //引入mongoose模块，来连接本地数据库
 var mongoose = require('mongoose')
+
+var fs = require('fs');
+//models loading
+var models_path = __dirname + '/app/models';
+var walk = function (path) {
+    fs.readdirSync(path).forEach(function (file) {
+        var newPath = path + '/' + file;
+        var stat = fs.statSync(newPath);
+        if (stat.isFile()) {
+            if (/(.*)\.(js|coffee)/.test(file)) {
+                require(newPath);
+            }
+        }
+        else if (stat.isDirectory()) {
+            walk(newPath);
+        }
+    })
+}
+walk(models_path);
 
 //从命令行中设置port号，默认是3000
 var port = process.env.PORT || 3000

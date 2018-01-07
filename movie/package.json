@@ -19,7 +19,8 @@
     "grunt": "^1.0.1",
     "grunt-concurrent": "^2.3.1",
     "grunt-contrib-watch": "^1.0.0",
-    "grunt-nodemon": "^0.4.2"
+    "grunt-nodemon": "^0.4.2",
+    "mocha": "^4.1.0"
   },
   "dependencies": {
     "bcrypt": "^1.0.3",

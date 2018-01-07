@@ -34,6 +34,19 @@ module.exports = function (grunt) {
                 }
             }
         },
+        mochaTest: {
+            options: {
+                reporter: 'spec'
+            },
+            src: ['test/**/**.js']
+        },
+        jshint: {
+            options: {
+                jshintrc: '.jshintrc',
+                ignores: ['public/libs/**/*.js']
+            },
+            all: ['public/js/*.js', 'test/**/*.js', 'app/**/*.js']
+        },
         //可以重新执行nodemon和watch
         concurrent: {
             tasks: ['nodemon', 'watch'],
@@ -48,6 +61,7 @@ module.exports = function (grunt) {
     grunt.loadNpmTasks("grunt-nodemon");//实时监听入口文件app.js,若其改动，则会自动重启app.js
     grunt.loadNpmTasks("grunt-concurrent");//针对慢任务开发的插件
     grunt.loadNpmTasks("grunt-mocha-test");
+    grunt.loadNpmTasks('grunt-contrib-jshint');
 
     grunt.option('force', true);//不要因为语法的错误和警告而中断了整个grunt的服务
     grunt.registerTask('default', ['concurrent']);//注册default任务
