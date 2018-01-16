@@ -6,9 +6,9 @@ exports.index = function (req, res) {
     Category
         .find({})
         .populate({
-            path: 'movies',
-            select: 'title poster',
-            options: { limit: 6 }
+            path: 'movies',//指定要填充的字段。String/Object类型，此处为Object类型
+            select: 'title poster',//指定填充document中的哪些字段。String/Object类型。Object格式:{name:1,_id:0},0表示不填充，1表示填充；String格式:"name -_id"，用空格分隔字段，-表示不填充
+            options: { limit: 6 }//Object,指定附加的其他查询选项，如排序以及条数限制等。
         })
         .exec(function (err, categories) {
             if (err) {
